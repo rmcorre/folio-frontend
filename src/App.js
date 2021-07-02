@@ -1,24 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+
+import Preloader from './components/Preloader';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import Services from './components/Services';
+import AboutUs from './components/AboutUs';
+import IntroVideo from './components/IntroVideo';
+import PricingTable from './components/PricingTable';
+import LatestNews from './components/LatestNews';
+import NewsLetter from './components/NewsLetter';
+import Brand from './components/Brand';
+import Footer from './components/Footer';
+import ScrollTop from './components/ScrollTop';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Preloader />
+      <Header />
+      <Hero />
+      <Services />
+      <AboutUs />
+      <IntroVideo />
+      <PricingTable />
+      <LatestNews />
+      <NewsLetter />
+      <Brand />
+      <Footer />
+      <ScrollTop />
+    </>
   );
 }
 
