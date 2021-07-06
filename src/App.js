@@ -1,7 +1,9 @@
 import './App.css';
 
 import Preloader from './components/Preloader';
+import ContactModal from './components/ContactModal';
 import Header from './components/Header';
+import HeroAround from './components/HeroAround';
 import Hero from './components/Hero';
 import Services from './components/Services';
 import AboutUs from './components/AboutUs';
@@ -17,17 +19,21 @@ function App() {
   return (
     <>
       <Preloader />
-      <Header />
-      <Hero />
-      <Services />
-      <AboutUs />
-      <IntroVideo />
-      <PricingTable />
-      <LatestNews />
-      <NewsLetter />
-      <Brand />
-      <Footer />
-      <ScrollTop />
+      <main className="page-wrapper">
+        <ContactModal />
+        <Header />
+        <HeroAround />
+        {/* <Hero /> */}
+        {/* <Services />
+        <AboutUs />
+        <IntroVideo />
+        <PricingTable />
+        <LatestNews />
+        <NewsLetter />
+        <Brand />
+        <Footer />
+        <ScrollTop /> */}
+      </main>
     </>
   );
 }

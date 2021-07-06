@@ -1,0 +1,718 @@
+// Custom.scss
+// Option B: Include parts of Bootstrap
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import '../../../node_modules/bootstrap/scss/functions';
+
+// 2. Include any default variable overrides here
+
+//== Colors
+//
+// Gray and brand colors to use across the Theme.
+
+// Grayscale
+$white: #fff;
+$gray-100: #f7f7fc;
+$gray-200: #f3f3f9;
+$gray-300: #e9e9f2;
+$gray-400: #dfdfeb;
+$gray-500: #9e9fb4;
+$gray-600: #737491;
+$gray-700: #5a5b75;
+$gray-800: #4a4b65;
+$gray-900: #37384e;
+$black: #000;
+
+// scss-docs-start color-variables
+$blue: #0d6efd;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #d63384;
+$red: #dc3545;
+$orange: #fd7e14;
+$yellow: #ffc107;
+$green: #198754;
+$teal: #20c997;
+$cyan: #0dcaf0;
+// scss-docs-end color-variables
+
+// scss-docs-start colors-map
+$colors: (
+  'blue': $blue,
+  'indigo': $indigo,
+  'purple': $purple,
+  'pink': $pink,
+  'red': $red,
+  'orange': $orange,
+  'yellow': $yellow,
+  'green': $green,
+  'teal': $teal,
+  'cyan': $cyan,
+  'white': $white,
+  'gray': $gray-600,
+  'gray-dark': $gray-800,
+);
+// scss-docs-end colors-map
+
+// Brand colors
+$primary: $indigo;
+$secondary: $gray-100;
+$info: #6a9bf4;
+$success: #16c995;
+$warning: #ffb15c;
+$danger: #f74f78;
+$light: $white;
+$dark: $gray-900;
+
+// Adding new color to default Bootstrap's $theme-colors map
+$theme-colors: (
+  'primary': $primary,
+  'secondary': $secondary,
+  'success': $success,
+  'info': $info,
+  'warning': $warning,
+  'danger': $danger,
+  'light': $light,
+  'dark': $dark,
+);
+
+// Faded colors map
+$theme-faded-colors: (
+  'primary': rgba($primary, 0.08),
+  'success': rgba($success, 0.08),
+  'info': rgba($info, 0.08),
+  'warning': rgba($warning, 0.08),
+  'danger': rgba($danger, 0.08),
+  'light': rgba($light, 0.08),
+  'dark': rgba($dark, 0.08),
+);
+
+// Gradient
+$gradient-from-color: $primary;
+$gradient-to-color: $info;
+
+$gradient: linear-gradient(
+  to right,
+  $gradient-from-color 0%,
+  $gradient-from-color 30%,
+  $gradient-to-color 100%
+);
+
+// User selection color
+$user-selection-color: rgba($primary, 0.22);
+
+// Options
+//
+// Modifying Bootstrap global options
+
+$enable-caret: false;
+$enable-shadows: true;
+$enable-negative-margins: true;
+$enable-smooth-scroll: false;
+
+// Spacing
+
+$spacer: 1rem;
+
+// Spacing between columns
+$grid-gutter-width: 1.875rem;
+
+// Spacing between columns
+$grid-gutter-width: 1.875rem !default;
+
+$spacers: (
+  0: 0,
+  1: $spacer / 4,
+  2: $spacer / 2,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 5,
+  7: $spacer * 6,
+  'grid-gutter': $grid-gutter-width,
+);
+
+// Grid settings overrides
+//
+// Modifying default Bootstrap's $grid-breakpoints map
+$grid-breakpoints: (
+  xs: 0,
+  sm: 500px,
+  md: 768px,
+  lg: 992px,
+  xl: 1280px,
+  xxl: 1400px,
+);
+
+// Grid containers
+//
+// Modifying default Bootstrap's $container-max-widths map (max-width of .container)
+$container-max-widths: (
+  sm: 100%,
+  md: 100%,
+  lg: 100%,
+  xl: 1260px,
+);
+
+// Body
+
+$body-color: $gray-600;
+$body-bg: $white;
+$text-muted: $gray-500;
+
+// Links
+
+$link-color: $primary;
+$link-decoration: none;
+$link-hover-color: darken($link-color, 10%);
+$link-hover-decoration: underline;
+$link-transition: color 0.2s ease-in-out;
+$emphasized-link-hover-darken-percentage: 0%;
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+
+$border-width: 1px;
+$border-color: $gray-300;
+$border-light-color: rgba($white, 0.14);
+
+$border-radius: 0.75rem;
+$border-radius-lg: 1rem;
+$border-radius-sm: 0.5rem;
+$border-radius-xs: 0.375rem;
+
+$box-shadow: 0 0 0.625rem -0.1875rem rgba($black, 0.13);
+$box-shadow-lg: -0.0625rem 0 0.625rem 0 rgba($black, 0.07),
+  0.3125rem 1.25rem 2.5rem 0 rgba($black, 0.04);
+$box-shadow-sm: 0 0 0.625rem -0.1875rem rgba($black, 0.13);
+$box-shadow-active: 0.1875rem 0.1875rem 0.625rem -0.125rem rgba($black, 0.09);
+$box-shadow-inset: inset 0 1px 2px transparent;
+
+// Border colors map
+$border-colors: (
+  'primary': rgba($primary, 0.35),
+  'success': rgba($success, 0.35),
+  'info': rgba($info, 0.35),
+  'warning': rgba($warning, 0.35),
+  'danger': rgba($danger, 0.35),
+  'light': $border-light-color,
+  'dark': rgba($dark, 0.35),
+);
+
+// Z-index master list
+$zindex-btn-scroll-top: 1025 !default;
+$zindex-toolbar: 1026 !default;
+$zindex-offcanvas: 1080 !default;
+
+// fonts
+$path-to-fonts: 'https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700&display=swap';
+$font-family-sans-serif: 'Inter', sans-serif;
+$headings-color: $gray-800;
+
+$font-size-base: 1rem;
+$font-size-xl: ($font-size-base * 1.25);
+$font-size-lg: ($font-size-base * 1.125);
+$font-size-md: ($font-size-base * 0.9375);
+$font-size-sm: ($font-size-base * 0.875);
+$font-size-ms: ($font-size-base * 0.8125);
+$font-size-xs: ($font-size-base * 0.75);
+
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+$line-height-base: 1.5;
+$line-height-lg: 1.5;
+$line-height-sm: 1.5;
+
+$h1-font-size: $font-size-base * 2.5;
+$h2-font-size: $font-size-base * 2;
+$h3-font-size: $font-size-base * 1.625;
+$h4-font-size: $font-size-base * 1.375;
+$h5-font-size: $font-size-base * 1.125;
+$h6-font-size: $font-size-base;
+
+$h1-line-height: 1.2;
+$h2-line-height: 1.25;
+$h3-line-height: 1.3;
+$h4-line-height: 1.35;
+$h5-line-height: 1.4;
+$h6-line-height: 1.4;
+
+$headings-margin-bottom: ($spacer * 0.75);
+$headings-font-weight: $font-weight-semibold;
+$paragraph-margin-bottom: ($spacer * 1.25);
+
+// Modifying default Bootstrap's $font-sizes map
+$font-sizes: (
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
+  5: $h5-font-size,
+  6: $h6-font-size,
+  'xl': $font-size-xl,
+  'lg': $font-size-lg,
+  'base': $font-size-base,
+  'md': $font-size-md,
+  'sm': $font-size-sm,
+  'ms': $font-size-ms,
+  'xs': $font-size-xs,
+);
+
+$display1-size: 4.5rem;
+$display2-size: 4rem;
+$display3-size: 3.5rem;
+$display4-size: 3rem;
+$display5-size: 2.5rem;
+$display6-size: 2rem;
+
+$display-font-sizes: (
+  1: $display1-size,
+  2: $display2-size,
+  3: $display3-size,
+  4: $display4-size,
+  5: $display5-size,
+  6: $display6-size,
+);
+
+$display-font-weight: $headings-font-weight;
+$display-line-height: 1;
+
+$lead-font-size: $font-size-base * 1.5;
+$lead-font-weight: 400;
+
+$text-shadow: 0 0.0625rem rgba($black, 0.5);
+
+$blockquote-font-size: $font-size-base;
+$blockquote-footer-font-size: $font-size-base;
+$blockquote-footer-font-weight: $font-weight-medium;
+$blockquote-footer-color: $headings-color;
+
+// $blockquote-mark: $ai-quotes;
+$blockquote-mark-color: rgba($primary, 0.5);
+$blockquote-mark-font-size: 4rem;
+
+// Code
+
+$pre-color: darken($gray-700, 5%);
+$pre-bg: $gray-100;
+$kbd-bg: $gray-800;
+
+$pre-line-numbers-border-width: $border-width;
+$pre-line-numbers-border-color: darken($border-color, 3%);
+$pre-line-numbers-color: $gray-500;
+
+// Custom scrollbar
+
+$scrollbar-width: 0.5rem;
+$scrollbar-bg: $gray-400;
+
+// Offcanvas
+
+$offcanvas-horizontal-width: 22rem;
+$offcanvas-padding-y: $spacer * 1.25;
+$offcanvas-padding-x: $spacer * 1.5;
+$offcanvas-border-color: transparent;
+$offcanvas-border-width: 0;
+$offcanvas-bg-color: $white;
+$offcanvas-box-shadow: $box-shadow-lg;
+$offcanvas-title-line-height: initial;
+
+// Sidebar
+
+$sidebar-bg: $gray-100;
+
+// Tables
+
+$table-cell-padding-y: 0.75rem;
+$table-cell-padding-x: 0.75rem;
+$table-cell-padding-y-sm: 0.375rem;
+$table-cell-padding-x-sm: 0.375rem;
+
+$table-dark-color: rgba($white, 0.75);
+
+$table-th-color: $headings-color;
+$table-th-font-weight: $headings-font-weight;
+
+$table-striped-bg-factor: 0.0375;
+$table-active-bg-factor: 0.05;
+$table-hover-bg-factor: 0.05;
+
+$table-bg-scale: -90%;
+
+// Modifying default Bootstrap's $table-variants map
+$table-variants: (
+  'primary': shift-color($primary, $table-bg-scale),
+  'secondary': $gray-100,
+  'success': shift-color($success, $table-bg-scale),
+  'info': shift-color($info, $table-bg-scale),
+  'warning': shift-color($warning, $table-bg-scale),
+  'danger': shift-color($danger, $table-bg-scale),
+  'dark': $dark,
+  'light': $light,
+);
+
+// Buttons + Forms
+
+$input-btn-padding-y: $spacer * 0.5625;
+$input-btn-padding-x: $spacer * 1.125;
+$input-btn-font-size: $font-size-base;
+
+$input-btn-padding-y-sm: $spacer * 0.425;
+$input-btn-padding-x-sm: $spacer * 1;
+$input-btn-font-size-sm: $font-size-sm;
+
+$input-btn-padding-y-lg: $spacer * 0.75;
+$input-btn-padding-x-lg: $spacer * 1.25;
+$input-btn-font-size-lg: $font-size-lg;
+
+$input-group-icon-size: $font-size-base;
+$input-btn-focus-width: 0;
+
+// Buttons
+
+$btn-padding-x: 1.25rem;
+$btn-padding-x-sm: 1rem;
+$btn-padding-x-lg: 1.5rem;
+
+$btn-box-shadow: unset;
+$btn-focus-box-shadow: unset;
+$btn-active-box-shadow: unset;
+
+$btn-dark-color: $white;
+$btn-light-color: $gray-700;
+$btn-font-weight: $font-weight-medium;
+
+$btn-link-decoration: none;
+$btn-link-hover-decoration: underline;
+
+$btn-icon-size: $font-size-base;
+$btn-white-space: nowrap;
+$btn-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out,
+  border-color 0.25s ease-in-out;
+
+// Market buttons
+$btn-market-padding-y: 0.375rem;
+$btn-market-padding-x: 1rem;
+$btn-market-border-radius: $border-radius-lg;
+$btn-market-bg: $gray-900;
+$btn-market-title-color: $white;
+$btn-market-title-font-size: $font-size-lg;
+$btn-market-subtitle-color: rgba($white, 0.6);
+$btn-market-subtitle-font-size: $font-size-xs;
+$btn-market-icon-size: 1.5rem;
+$btn-market-outline-border-color: rgba($white, 0.15);
+$btn-market-outline-hover-bg: rgba($white, 0.08);
+$btn-market-outline-transition: background-color 0.25s ease-in-out;
+
+// Scroll to top button
+$btn-scroll-top-size: 2.75rem;
+$btn-scroll-top-icon-font-size: $font-size-lg;
+$btn-scroll-top-bg: rgba($gray-900, 0.25);
+$btn-scroll-top-hover-bg: rgba($gray-900, 0.5);
+$btn-scroll-top-color: $white;
+$btn-scroll-top-hover-color: $white;
+$btn-scroll-top-transition: right 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55),
+  opacity 0.3s, background-color 0.25s ease-in-out;
+
+// Close
+$btn-close-width: 0.625em;
+
+// Navs
+
+$nav-link-padding-y: 0.5625rem;
+$nav-link-padding-x: 1.25rem;
+$nav-link-font-weight: $font-weight-medium;
+$nav-link-color: $gray-700;
+$nav-link-hover-color: $primary;
+$nav-link-active-color: $primary;
+$nav-link-disabled-color: $gray-500;
+$nav-link-icon-size: $font-size-base;
+$nav-link-transition: color 0.25s ease-in-out,
+  background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out,
+  border-color 0.25s ease-in-out;
+
+// Light navs
+$nav-link-light-color: rgba($white, 0.7);
+$nav-link-light-hover-color: $white;
+$nav-link-light-active-color: $white;
+$nav-link-light-disabled-color: rgba($white, 0.5);
+
+// Indicator
+$nav-indicator-size: 0.3125rem;
+$nav-indicator-bg: $success;
+
+// Tabs
+$nav-tabs-border-color: transparent;
+$nav-tabs-link-hover-border-color: $nav-tabs-border-color;
+$nav-tabs-link-color: $nav-link-color;
+$nav-tabs-link-hover-color: $nav-link-hover-color;
+$nav-tabs-link-active-color: $nav-link-active-color;
+$nav-tabs-link-active-bg: transparent;
+$nav-tabs-link-active-border-color: rgba($primary, 0.35);
+
+// Light tabs
+$nav-tabs-light-link-color: $nav-link-light-color;
+$nav-tabs-light-link-hover-color: $nav-link-light-hover-color;
+$nav-tabs-light-link-active-color: $nav-link-light-active-color;
+$nav-tabs-light-link-active-border-color: rgba($white, 0.25);
+$nav-tabs-light-link-disabled-color: $nav-link-light-disabled-color;
+
+// Pills
+$nav-pills-font-size: $input-btn-font-size;
+$nav-pills-link-color: $nav-link-color;
+$nav-pills-link-bg: $secondary;
+$nav-pills-link-hover-color: $gray-700;
+$nav-pills-link-hover-bg: darken($nav-pills-link-bg, 4%);
+
+// Media tabs
+$media-tab-padding: 0.625rem;
+$media-tab-border-radius: $border-radius-lg;
+$media-tab-opacity: 0.72;
+$media-tab-active-opacity: 1;
+$media-tab-active-bg: $white;
+$media-tab-active-box-shadow: $box-shadow-active;
+$media-tab-transition: background-color 0.25s ease-in-out,
+  border-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+
+$media-tab-light-color: $white;
+$media-tab-light-border-color: $border-light-color;
+$media-tab-light-hover-border-color: rgba($white, 0.35);
+$media-tab-light-active-color: $gray-700;
+
+// Fancy tabs
+$fancy-tab-color: $gray-500;
+$fancy-tab-hover-color: $gray-700;
+$fancy-tab-active-color: $white;
+$fancy-tab-transition: color 0.25s ease-in-out, opacity 0.25s ease-in-out,
+  transform 0.25s ease-in-out;
+
+// Metadata links
+$meta-link-color: lighten($gray-600, 2%);
+$meta-link-transition: color 0.2s ease-in-out;
+$meta-link-hover-color: darken($gray-700, 6%);
+$meta-divider-width: $border-width;
+$meta-divider-height: 1rem;
+$meta-divider-spacing-x: 0.625rem;
+$meta-divider-color: darken($border-color, 3%);
+
+// Navbar
+
+$navbar-padding-y: $spacer * 0.75;
+$navbar-padding-x: $grid-gutter-width / 2;
+
+$navbar-brand-font-size: $font-size-base * 1.625;
+$navbar-brand-font-weight: 500;
+$navbar-shadow: 0 0.125rem 0.625rem -0.1875rem rgba($black, 0.1);
+
+$navbar-brand-padding-y: 0;
+
+$navbar-nav-link-padding-y: 0.875rem;
+$navbar-nav-link-padding-x: 1.125rem;
+
+$navbar-toggler-padding-y: 0.75rem;
+$navbar-toggler-padding-x: 0.75rem;
+$navbar-toggler-font-size: $font-size-base;
+$navbar-toggler-border-radius: 0;
+
+$navbar-light-color: $gray-700;
+$navbar-light-hover-color: $primary;
+$navbar-light-active-color: $primary;
+$navbar-light-disabled-color: $gray-500;
+$navbar-light-toggler-border-color: transparent;
+$navbar-light-brand-color: $gray-800;
+$navbar-light-brand-hover-color: $gray-800;
+$navbar-light-tool-color: $gray-700;
+$navbar-light-tool-hover-color: $gray-900;
+
+$navbar-dark-color: rgba($white, 0.7);
+$navbar-dark-hover-color: $white;
+$navbar-dark-active-color: $white;
+$navbar-dark-disabled-color: rgba($white, 0.45);
+$navbar-dark-toggler-border-color: transparent;
+$navbar-dark-tool-color: $white;
+$navbar-dark-tool-hover-color: $white;
+
+$navbar-dropdown-min-width: 12.5rem;
+$navbar-dropdown-column-width: 15rem;
+
+// Navbar tools
+$navbar-tool-icon-box-size: 2.75rem;
+$navbar-tool-icon-font-size: 1.375rem;
+
+$navbar-tool-label-font-size: $font-size-sm;
+$navbar-tool-label-font-weight: $font-weight-medium;
+
+$navbar-tool-badge-size: 1.125rem;
+$navbar-tool-badge-bg: $primary;
+$navbar-tool-badge-color: $white;
+$navbar-tool-badge-font-size: $font-size-xs;
+$navbar-tool-badge-font-weight: $font-weight-medium;
+
+$navbar-tool-transition: color 0.25s ease-in-out;
+
+// Navbar stuck
+$navbar-stuck-shadow: $navbar-shadow;
+$navbar-stuck-bg: $white;
+
+// Topbar
+
+$topbar-padding-y: 0.625rem;
+$topbar-padding-x: $navbar-padding-x;
+$topbar-font-size: $font-size-sm;
+
+$topbar-light-color: darken($gray-600, 3%);
+$topbar-light-hover-color: lighten($gray-900, 3%);
+$topbar-light-active-color: lighten($gray-900, 3%);
+
+$topbar-dark-color: rgba($white, 0.7);
+$topbar-dark-hover-color: $white;
+$topbar-dark-active-color: $white;
+
+// Accordion
+
+$accordion-padding-y: 1.125rem;
+$accordion-padding-x: 1.5rem;
+$accordion-body-padding-y: 1.5rem;
+$accordion-body-padding-x: 1.5rem;
+
+$accordion-border-color: $border-color;
+$accordion-button-focus-border-color: $accordion-border-color;
+
+$accordion-bg: transparent;
+$accordion-button-active-bg: $accordion-bg;
+$accordion-button-font-size: $font-size-base * 1.125;
+$accordion-button-font-weight: $font-weight-semibold;
+$accordion-border-radius: $border-radius-lg;
+
+$accordion-icon-transition: none;
+$accordion-icon-width: 0.75rem;
+
+$accordion-color: $gray-800;
+$accordion-button-active-color: $primary;
+$accordion-icon-color: $accordion-color;
+$accordion-icon-active-color: $accordion-button-active-color;
+
+$accordion-button-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 426.667 426.667'><path fill-rule='evenodd' fill='#{$accordion-icon-color}' d='M405.332 192H234.668V21.332C234.668 9.559 225.109 0 213.332 0S192 9.559 192 21.332V192H21.332C9.559 192 0 201.559 0 213.332s9.559 21.336 21.332 21.336H192v170.664c0 11.777 9.559 21.336 21.332 21.336s21.336-9.559 21.336-21.336V234.668h170.664c11.777 0 21.336-9.559 21.336-21.336S417.109 192 405.332 192zm0 0'/></svg>");
+
+$accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='121.805' height='121.804'><path fill-rule='evenodd' fill='#{$accordion-icon-active-color}' d='M7.308 68.211h107.188a7.31 7.31 0 0 0 7.309-7.31 7.31 7.31 0 0 0-7.309-7.309H7.308A7.31 7.31 0 0 0 0 60.902a7.31 7.31 0 0 0 7.308 7.309z'/></svg>");
+
+// Dropdown
+
+$dropdown-border-color: $border-color;
+$dropdown-divider-bg: $border-color;
+$dropdown-box-shadow: $box-shadow-lg;
+
+$dropdown-link-color: $gray-700;
+$dropdown-link-hover-color: $primary;
+$dropdown-link-hover-bg: transparent;
+$dropdown-link-active-color: $primary;
+$dropdown-link-active-bg: transparent;
+$dropdown-link-disabled-color: $gray-500;
+$dropdown-link-transition: all 0.25s ease-in-out;
+
+$dropdown-item-padding-y: 0.425rem;
+$dropdown-item-padding-x: 1.3rem;
+$dropdown-item-font-size: ($font-size-base * 0.875);
+$dropdown-item-icon-size: $dropdown-item-font-size;
+
+$dropdown-header-color: $headings-color;
+$dropdown-header-font-size: $font-size-base;
+
+$dropdown-dark-color: rgba($white, 0.7);
+$dropdown-dark-border-color: transparent;
+$dropdown-dark-divider-bg: $border-light-color;
+$dropdown-dark-box-shadow: none;
+$dropdown-dark-link-color: $dropdown-dark-color;
+$dropdown-dark-link-hover-bg: transparent;
+$dropdown-dark-link-active-color: $white;
+$dropdown-dark-link-active-bg: $dropdown-dark-link-hover-bg;
+$dropdown-dark-link-disabled-color: rgba($white, 0.45);
+$dropdown-dark-header-color: $white;
+
+// Breadcrumb
+
+$breadcrumb-font-size: $font-size-sm;
+$breadcrumb-padding-y: 0;
+$breadcrumb-padding-x: 0;
+$breadcrumb-item-padding: 0.425rem;
+$breadcrumb-margin-bottom: 0;
+$breadcrumb-bg: transparent;
+$breadcrumb-divider-color: $gray-500;
+$breadcrumb-item-font-size: $font-size-base * 0.8125;
+// $breadcrumb-divider: $ai-chevron-right;
+$breadcrumb-divider-font-size: 1.2em;
+$breadcrumb-active-color: $gray-500;
+
+$breadcrumb-dark-item-link-color: $gray-700;
+$breadcrumb-dark-item-link-hover-color: $primary;
+
+$breadcrumb-light-item-link-color: $white;
+$breadcrumb-light-item-link-hover-color: $white;
+$breadcrumb-light-active-color: rgba($white, 0.5);
+$breadcrumb-light-divider-color: rgba($white, 0.5);
+
+// Badges
+
+$badge-font-weight: $font-weight-medium;
+$badge-padding-y: 0.25em;
+$badge-padding-x: 0.5em;
+$badge-border-radius: $border-radius-xs;
+$badge-transition: background-color 0.25s ease-in-out;
+
+// .btn {
+//   color: $primary;
+// }
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import '../../../node_modules/bootstrap/scss/variables';
+@import '../../../node_modules/bootstrap/scss/mixins';
+@import '../../../node_modules/bootstrap/scss/utilities';
+
+// 4. Include any optional Bootstrap components as you like
+@import '../../../node_modules/bootstrap/scss/root';
+@import '../../../node_modules/bootstrap/scss/reboot';
+@import '../../../node_modules/bootstrap/scss/type';
+@import '../../../node_modules/bootstrap/scss/images';
+@import '../../../node_modules/bootstrap/scss/containers';
+@import '../../../node_modules/bootstrap/scss/grid';
+@import '../../../node_modules/bootstrap/scss/tables';
+@import '../../../node_modules/bootstrap/scss/forms';
+@import '../../../node_modules/bootstrap/scss/buttons';
+@import '../../../node_modules/bootstrap/scss/transitions';
+@import '../../../node_modules/bootstrap/scss/dropdown';
+@import '../../../node_modules/bootstrap/scss/button-group';
+@import '../../../node_modules/bootstrap/scss/nav';
+@import '../../../node_modules/bootstrap/scss/navbar';
+@import '../../../node_modules/bootstrap/scss/card';
+@import '../../../node_modules/bootstrap/scss/accordion';
+@import '../../../node_modules/bootstrap/scss/breadcrumb';
+@import '../../../node_modules/bootstrap/scss/pagination';
+@import '../../../node_modules/bootstrap/scss/badge';
+@import '../../../node_modules/bootstrap/scss/alert';
+@import '../../../node_modules/bootstrap/scss/progress';
+@import '../../../node_modules/bootstrap/scss/list-group';
+@import '../../../node_modules/bootstrap/scss/close';
+@import '../../../node_modules/bootstrap/scss/toasts';
+@import '../../../node_modules/bootstrap/scss/modal';
+@import '../../../node_modules/bootstrap/scss/tooltip';
+@import '../../../node_modules/bootstrap/scss/popover';
+@import '../../../node_modules/bootstrap/scss/carousel';
+@import '../../../node_modules/bootstrap/scss/spinners';
+@import '../../../node_modules/bootstrap/scss/offcanvas';
+
+// Helpers
+@import '../../../node_modules/bootstrap/scss/helpers';
+
+// Utilities
+@import '../../../node_modules/bootstrap/scss/utilities/api';
+
+// 5. Add additional custom code here
+// Around Template
+@import './aroundTemplate/mixins';
+@import './aroundTemplate/reboot';
+@import './aroundTemplate/components/buttons';
+@import './aroundTemplate/components/offcanvas';
+@import './aroundTemplate/components/navbar';
