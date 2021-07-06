@@ -2,37 +2,32 @@
     Variables
 ========================================*/
 // Font Family
-$font: 'Spartan',
-sans-serif;
-
+// $font: 'Inter', sans-serif;
 
 // Colors ---------------
 $white: #fff;
 $black: #081828;
 $gray: #f6f9fc;
-
+$text-navItem-a: #5a5b75;
 
 // Theme Color
-$theme-color: #3763EB;
+$theme-color: #766df4;
 
-$border-color: #F4EEFB;
+$border-color: #f4eefb;
 
 //Body Color
 $body-color: #6e657e;
-
 
 // Heading Color
 $heading-color: #081828;
 
 //Border Radius
-$borderRadius:10px;
-
-
+$borderRadius: 10px;
 
 // Responsive Variables
 $desktop: 'only screen and (min-width: 1400px)';
 $laptop: 'only screen and (min-width: 1200px) and (max-width: 1399px)';
-$lg : 'only screen and (min-width: 992px) and (max-width: 1199px)';
-$md:'only screen and (min-width: 768px) and (max-width: 991px)';
-$xs:'(max-width: 767px)';
+$lg: 'only screen and (min-width: 992px) and (max-width: 1199px)';
+$md: 'only screen and (min-width: 768px) and (max-width: 991px)';
+$xs: '(max-width: 767px)';
 $sm: 'only screen and (min-width: 480px) and (max-width: 767px)';
