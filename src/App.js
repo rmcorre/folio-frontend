@@ -1,9 +1,13 @@
+import React from 'react';
+import { PortfolioContextProvider } from './store/portfolioContext';
+
 import './App.css';
 
 import Preloader from './components/Preloader';
 import ContactModal from './components/ContactModal';
 import Header from './components/Header';
 import HeroAround from './components/HeroAround';
+import ServicesAround from './components/ServicesAround';
 import Hero from './components/Hero';
 import Services from './components/Services';
 import AboutUs from './components/AboutUs';
@@ -17,12 +21,13 @@ import ScrollTop from './components/ScrollTop';
 
 function App() {
   return (
-    <>
+    <PortfolioContextProvider>
       <Preloader />
       <main className="page-wrapper">
         <ContactModal />
         <Header />
         <HeroAround />
+        <ServicesAround />
         {/* <Hero /> */}
         {/* <Services />
         <AboutUs />
@@ -34,7 +39,7 @@ function App() {
         <Footer />
         <ScrollTop /> */}
       </main>
-    </>
+    </PortfolioContextProvider>
   );
 }
 

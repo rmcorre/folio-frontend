@@ -21,12 +21,12 @@ const ContactModal = () => {
                   className="btn-check"
                   type="radio"
                   name="services"
-                  id="illustration"
+                  id="frontEnd"
                   autocomplete="off"
                   checked
                 />
-                <label className="btn btn-outline-primary" for="illustration">
-                  Illustration
+                <label className="btn btn-outline-primary" for="frontEnd">
+                  Front End
                 </label>
               </div>
               <div className="me-2 mb-2">
@@ -34,11 +34,11 @@ const ContactModal = () => {
                   className="btn-check"
                   type="radio"
                   name="services"
-                  id="packaging"
+                  id="backEnd"
                   autocomplete="off"
                 />
-                <label className="btn btn-outline-primary" for="packaging">
-                  Packaging
+                <label className="btn btn-outline-primary" for="backEnd">
+                  Back End
                 </label>
               </div>
               <div className="me-2 mb-2">
@@ -46,11 +46,11 @@ const ContactModal = () => {
                   className="btn-check"
                   type="radio"
                   name="services"
-                  id="branding"
+                  id="feature"
                   autocomplete="off"
                 />
-                <label className="btn btn-outline-primary" for="branding">
-                  Branding
+                <label className="btn btn-outline-primary" for="feature">
+                  Feature
                 </label>
               </div>
             </div>

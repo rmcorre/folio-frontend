@@ -1,6 +1,10 @@
 import React from 'react';
 
+import { usePortfolioAPI } from '../store/portfolioContext';
+
 const Hero = () => {
+  const { profile } = usePortfolioAPI();
+
   return (
     <section className="hero-area">
       <div className="hero-inner">
@@ -13,13 +17,13 @@ const Hero = () => {
                     className="wow fadeInUp display-4 mb-lg-4 mb-3"
                     data-wow-delay=".3s"
                   >
-                    Hey, I'm Horacio
+                    Hey, I'm {profile.firstName}
                   </h1>
                   <h2
                     class="wow fadeInUp mb-lg-5 mb-4 text-muted w-75"
                     data-wow-delay=".4s"
                   >
-                    Full Stack Developer &amp; Illustrator
+                    {profile.role} &amp; Illustrator
                   </h2>
                   {/* <p className="wow fadeInUp" data-wow-delay=".5s">
                     Lorem Ipsum is simply dummy text of the printing and
