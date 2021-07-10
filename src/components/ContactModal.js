@@ -14,7 +14,7 @@ const ContactModal = () => {
               aria-label="Close"
             ></button>
           </div>
-          <form className="modal-body needs-validation py-4" novalidate>
+          <form className="modal-body needs-validation py-4" noValidate>
             <div className="btn-group mb-3">
               <div className="me-2 mb-2">
                 <input
@@ -22,10 +22,10 @@ const ContactModal = () => {
                   type="radio"
                   name="services"
                   id="frontEnd"
-                  autocomplete="off"
-                  checked
+                  autoComplete="off"
+                  readOnly
                 />
-                <label className="btn btn-outline-primary" for="frontEnd">
+                <label className="btn btn-outline-primary" htmlFor="frontEnd">
                   Front End
                 </label>
               </div>
@@ -35,9 +35,9 @@ const ContactModal = () => {
                   type="radio"
                   name="services"
                   id="backEnd"
-                  autocomplete="off"
+                  autoComplete="off"
                 />
-                <label className="btn btn-outline-primary" for="backEnd">
+                <label className="btn btn-outline-primary" htmlFor="backEnd">
                   Back End
                 </label>
               </div>
@@ -47,9 +47,9 @@ const ContactModal = () => {
                   type="radio"
                   name="services"
                   id="feature"
-                  autocomplete="off"
+                  autoComplete="off"
                 />
-                <label className="btn btn-outline-primary" for="feature">
+                <label className="btn btn-outline-primary" htmlFor="feature">
                   Feature
                 </label>
               </div>

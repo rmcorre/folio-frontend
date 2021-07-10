@@ -1,13 +1,37 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 // Need this for modal functionality
 import { Modal } from 'bootstrap';
 
-import logo from '../img/logo/hcLogo3.svg';
+import logo from '../img/logo/hcLogo4.svg';
 
-const Header = () => {
+const Header = (props) => {
+  const header = useRef(null);
+  const [navbarStuck, setNavbarStuck] = useState('');
+
+  const handleScroll = (e) => {
+    if (e.currentTarget.pageYOffset > 500) {
+      document.body.style.paddingTop = header.current.offsetHeight + 'px';
+      setNavbarStuck('navbar-stuck');
+    } else {
+      document.body.style.paddingTop = '';
+      setNavbarStuck('');
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [navbarStuck]);
+
   return (
-    <header className="header navbar navbar-expand-lg navbar-light bg-light navbar-sticky">
+    <header
+      ref={header}
+      className={`header navbar navbar-expand-lg navbar-light bg-light navbar-sticky ${navbarStuck}`}
+    >
       <div className="navbar-search bg-light">
         <div className="container d-flex flex-nowrap align-items-center">
           <i className="ai-search fs-xl"></i>
@@ -47,7 +71,7 @@ const Header = () => {
             alt="Around"
             width="50"
           />
-          <img className="d-lg-none" src={logo} alt="Around" width="58" />
+          <img className="d-lg-none" src={logo} alt="Around" width="36" />
         </a>
         <div className="d-flex align-items-center order-lg-3 ms-lg-auto">
           <a
