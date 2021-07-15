@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 // Need this for modal functionality
+// eslint-disable-next-line no-unused-vars
 import { Modal } from 'bootstrap';
 
-import logo from '../img/logo/hcLogo4.svg';
+import logo from '../img/logo/hcLogo5.svg';
 
 const Header = (props) => {
   const header = useRef(null);
