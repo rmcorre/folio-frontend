@@ -3,10 +3,6 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import './assets/css/LineIcons.2.0.css';
-// import './assets/css/animate.css';
-import './assets/css/tiny-slider.css';
-import './assets/css/glightbox.min.css';
 import './assets/scss/customBootstrap.css';
 
 ReactDOM.render(

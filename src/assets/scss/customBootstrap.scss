@@ -1279,6 +1279,6 @@ $utilities: map-merge(
 @import './aroundTemplate/components/widgets';
 
 // Vendor imports
-@import '../css/animate';
+@import './aroundTemplate/vendor/animate';
 @import './aroundTemplate/vendor/simplebar/dist/simplebar.min';
 @import './aroundTemplate/vendor/tiny-slider/dist/tiny-slider';

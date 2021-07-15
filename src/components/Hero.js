@@ -1,54 +1,47 @@
 import React from 'react';
+import WOW from 'wow.js';
 
-import { usePortfolioAPI } from '../store/portfolioContext';
+import heroImage from '../img/developer4.svg';
 
-const Hero = () => {
-  const { profile } = usePortfolioAPI();
+const HeroAround = () => {
+  const wow = new WOW();
+  wow.init();
 
   return (
-    <section className="hero-area">
-      <div className="hero-inner">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-6 co-12">
-              <div className="home-slider">
-                <div className="hero-text">
-                  <h1
-                    className="wow fadeInUp display-4 mb-lg-4 mb-3"
-                    data-wow-delay=".3s"
-                  >
-                    Hey, I'm {profile.firstName}
-                  </h1>
-                  <h2
-                    class="wow fadeInUp mb-lg-5 mb-4 text-muted w-75"
-                    data-wow-delay=".4s"
-                  >
-                    {profile.role} &amp; Illustrator
-                  </h2>
-                  {/* <p className="wow fadeInUp" data-wow-delay=".5s">
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since.
-                  </p> */}
-                  <div className="button wow fadeInUp" data-wow-delay=".7s">
-                    <a
-                      href="about-us.html"
-                      className="btn btn-translucent-primary me-3"
-                    >
-                      Download CV
-                    </a>
-                    <a href="about-us.html" className="btn btn-outline-primary">
-                      Portfolio
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
+    <section className="container mb-3 my-md-0 py-5 py-md-6">
+      <div className="row align-items-center">
+        <div className="col-lg-4 col-md-5 order-md-1 order-2 text-md-start text-center">
+          <h1
+            className="wow fadeInUp display-4 mb-lg-4 mb-3"
+            data-wow-delay=".3s"
+          >
+            Hey, I’m Horacio
+          </h1>
+          <h2
+            className="wow fadeInUp mb-lg-5 mb-4 text-muted"
+            data-wow-delay=".5s"
+          >
+            Full Stack Developer &amp; Illustrator
+          </h2>
+          <div className="wow fadeInUp text-nowrap" data-wow-delay=".7s">
+            <a className="btn btn-translucent-primary me-3" href="#">
+              <i className="ai-arrow-down-circle mt-n1 me-2"></i>Download CV
+            </a>
+            <a
+              className="btn btn-outline-primary"
+              href="#portfolio"
+              data-scroll
+            >
+              Portfolio
+            </a>
           </div>
+        </div>
+        <div className="col-lg-8 col-md-7 order-md-2 order-1 mb-md-0 mb-grid-gutter">
+          <img src={heroImage} alt="Illustration" rel="preload" as="image" />
         </div>
       </div>
     </section>
   );
 };
 
-export default Hero;
+export default HeroAround;
