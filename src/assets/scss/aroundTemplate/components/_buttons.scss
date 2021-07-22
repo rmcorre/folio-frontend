@@ -278,115 +278,115 @@
 
 // Scroll to top button
 
-// .btn-scroll-top {
-//   display: block;
-//   position: fixed;
-//   right: -($btn-scroll-top-size * 1.5);
-//   bottom: $spacer * 1.25;
-//   width: $btn-scroll-top-size;
-//   height: $btn-scroll-top-size;
-//   transition: $btn-scroll-top-transition;
-//   @include border-radius($btn-border-radius);
-//   background-color: $btn-scroll-top-bg;
-//   color: $btn-scroll-top-color;
-//   text-align: center;
-//   opacity: 0;
-//   z-index: $zindex-btn-scroll-top;
+.btn-scroll-top {
+  display: block;
+  position: fixed;
+  right: -($btn-scroll-top-size * 1.5);
+  bottom: $spacer * 1.25;
+  width: $btn-scroll-top-size;
+  height: $btn-scroll-top-size;
+  transition: $btn-scroll-top-transition;
+  @include border-radius($btn-border-radius);
+  background-color: $btn-scroll-top-bg;
+  color: $btn-scroll-top-color;
+  text-align: center;
+  opacity: 0;
+  z-index: $zindex-btn-scroll-top;
 
-//   > .btn-scroll-top-icon {
-//     font: {
-//       size: $btn-scroll-top-icon-font-size;
-//       weight: bold;
-//     }
-//     line-height: $btn-scroll-top-size - 0.125rem;
-//   }
+  > .btn-scroll-top-icon {
+    font: {
+      size: $btn-scroll-top-icon-font-size;
+      weight: bold;
+    }
+    line-height: $btn-scroll-top-size - 0.125rem;
+  }
 
-//   .btn-scroll-top-tooltip {
-//     position: absolute;
-//     top: 50%;
-//     right: 100%;
-//     transform: translateY(-50%);
-//     transition: opacity 0.25s ease-in-out, visibility 0.25s ease-in-out;
-//     visibility: hidden;
-//     opacity: 0;
-//   }
+  .btn-scroll-top-tooltip {
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    transform: translateY(-50%);
+    transition: opacity 0.25s ease-in-out, visibility 0.25s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+  }
 
-//   &:hover {
-//     background-color: $btn-scroll-top-hover-bg;
-//     color: $btn-scroll-top-hover-color;
-//     .btn-scroll-top-tooltip {
-//       visibility: visible;
-//       opacity: 1;
-//     }
-//   }
+  &:hover {
+    background-color: $btn-scroll-top-hover-bg;
+    color: $btn-scroll-top-hover-color;
+    .btn-scroll-top-tooltip {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
 
-//   &.show {
-//     right: $spacer * 1.25;
-//     opacity: 1;
-//   }
+  &.show {
+    right: $spacer * 1.25;
+    opacity: 1;
+  }
 
-//   @include media-breakpoint-down(sm) {
-//     width: $btn-scroll-top-size / 1.2;
-//     height: $btn-scroll-top-size / 1.2;
-//     bottom: $spacer;
-//     > .btn-scroll-top-icon {
-//       line-height: $btn-scroll-top-size / 1.2;
-//     }
-//     &.show {
-//       right: $spacer;
-//     }
-//   }
-// }
+  @include media-breakpoint-down(sm) {
+    width: $btn-scroll-top-size / 1.2;
+    height: $btn-scroll-top-size / 1.2;
+    bottom: $spacer;
+    > .btn-scroll-top-icon {
+      line-height: $btn-scroll-top-size / 1.2;
+    }
+    &.show {
+      right: $spacer;
+    }
+  }
+}
 
 // Like / Dislike buttons
 
-// .btn-like,
-// .btn-dislike {
-//   display: inline-block;
-//   padding: 0;
-//   padding-left: 0.625rem;
-//   transition: $nav-link-transition;
-//   border: 0;
-//   background: 0;
-//   color: lighten($gray-600, 3%);
-//   @include font-size($font-size-sm);
-//   text-decoration: none !important;
-//   white-space: nowrap;
-//   vertical-align: middle;
+.btn-like,
+.btn-dislike {
+  display: inline-block;
+  padding: 0;
+  padding-left: 0.625rem;
+  transition: $nav-link-transition;
+  border: 0;
+  background: 0;
+  color: lighten($gray-600, 3%);
+  @include font-size($font-size-sm);
+  text-decoration: none !important;
+  white-space: nowrap;
+  vertical-align: middle;
 
-//   &::before {
-//     display: inline-block;
-//     margin-right: 0.375rem;
-//     font: {
-//       family: $icons-font-family;
-//       size: 1.25em;
-//     }
-//     vertical-align: middle;
-//   }
+  &::before {
+    display: inline-block;
+    margin-right: 0.375rem;
+    font: {
+      family: $icons-font-family;
+      size: 1.25em;
+    }
+    vertical-align: middle;
+  }
 
-//   &:first-child {
-//     padding: {
-//       right: 0.625rem;
-//       left: 0;
-//     }
-//     border-right: $border-width solid darken($border-color, 2%);
-//   }
+  &:first-child {
+    padding: {
+      right: 0.625rem;
+      left: 0;
+    }
+    border-right: $border-width solid darken($border-color, 2%);
+  }
 
-//   &:focus {
-//     outline: none;
-//   }
-//   &:hover {
-//     color: $gray-800;
-//   }
-// }
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    color: $gray-800;
+  }
+}
 
-// .btn-like::before {
-//   margin-top: -0.325rem;
-//   color: $success;
-//   content: $ai-thumbs-up;
-// }
+.btn-like::before {
+  margin-top: -0.325rem;
+  color: $success;
+  content: $ai-thumbs-up;
+}
 
-// .btn-dislike::before {
-//   color: $danger;
-//   content: $ai-thumbs-down;
-// }
+.btn-dislike::before {
+  color: $danger;
+  content: $ai-thumbs-down;
+}

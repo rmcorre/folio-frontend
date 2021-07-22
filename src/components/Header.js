@@ -1,14 +1,17 @@
 import React, { useState, useEffect, useRef } from 'react';
+import AuthNav from '../components/auth/AuthNav';
 
 // Need this for modal functionality
 // eslint-disable-next-line no-unused-vars
 import { Modal } from 'bootstrap';
 
-import logo from '../img/logo/hcLogo5.svg';
+import logo from '../img/logo/hcLogo2.svg';
 
 const Header = (props) => {
-  const header = useRef(null);
+  const header = useRef(null); // Is this required?
+
   const [navbarStuck, setNavbarStuck] = useState('');
+  const [authNav, setAuthNav] = useState('');
 
   const handleScroll = (e) => {
     if (e.currentTarget.pageYOffset > 500) {
@@ -27,6 +30,12 @@ const Header = (props) => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, [navbarStuck]);
+
+  useEffect(() => {
+    if (props.admin) {
+      setAuthNav(<AuthNav />);
+    }
+  }, []);
 
   return (
     <header
@@ -75,6 +84,7 @@ const Header = (props) => {
           <img className="d-lg-none" src={logo} alt="Around" width="36" />
         </a>
         <div className="d-flex align-items-center order-lg-3 ms-lg-auto">
+          {authNav}
           <a
             className="btn btn-primary d-lg-inline-block d-none"
             href="#modal-contact"

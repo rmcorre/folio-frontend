@@ -1,7 +1,8 @@
 import React from 'react';
 import WOW from 'wow.js';
 
-import heroImage from '../img/developer4.svg';
+// import heroImage from '../img/developer4.svg';
+import heroImage from '../img/developerResized.png';
 
 const HeroAround = () => {
   const wow = new WOW();
@@ -15,13 +16,13 @@ const HeroAround = () => {
             className="wow fadeInUp display-4 mb-lg-4 mb-3"
             data-wow-delay=".3s"
           >
-            Hey, I’m Horacio
+            Hey, <br /> I’m Horacio
           </h1>
           <h2
             className="wow fadeInUp mb-lg-5 mb-4 text-muted"
             data-wow-delay=".5s"
           >
-            Full Stack Developer &amp; Illustrator
+            Full Stack Developer
           </h2>
           <div className="wow fadeInUp text-nowrap" data-wow-delay=".7s">
             <a className="btn btn-translucent-primary me-3" href="#">

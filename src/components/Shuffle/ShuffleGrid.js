@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import ShuffleItem from './ShuffleItem';
 
-import apologeticRobot from '../../img/around/portfolio/01.jpg';
-import womanWalking from '../../img/around/portfolio/02.jpg';
-import oilBottle from '../../img/around/portfolio/03.jpg';
-import smilingWoman from '../../img/around/portfolio/04.jpg';
-import drink from '../../img/around/portfolio/05.jpg';
-import love from '../../img/around/portfolio/06.jpg';
+import apologeticRobot from '../../img/portfolio/01.jpg';
+import womanWalking from '../../img/portfolio/02.jpg';
+import oilBottle from '../../img/portfolio/03.jpg';
+import smilingWoman from '../../img/portfolio/04.jpg';
+import drink from '../../img/portfolio/05.jpg';
+import love from '../../img/portfolio/06.jpg';
 
 const photosArray = [
   {
