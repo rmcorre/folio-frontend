@@ -10,15 +10,15 @@ const Resume = (props) => {
   return (
     <>
       <main>
-        <div className="container-md mt-md-5">
-          <h1 className="visually-hidden">Resume</h1>
+        <div className="container mt-lg-5">
+          <h1 className="visually-hidden">RESUME</h1>
           <div className="row min-vh-100 mb-5">
-            <div className="col-sm-5 g-0 bg-primary text-white">
+            <div className="col-md-5 g-0 bg-faded-primary">
               <ProfileSection />
               <SummarySection />
               <SkillSetSection />
             </div>
-            <div className="col-sm-7 g-0 bg-white">
+            <div className="col-md-7 g-0 bg-white">
               <EducationSection />
               <ExperienceSection />
             </div>

@@ -6,7 +6,7 @@ const Col_2_autorow = (props) => {
 
   return (
     <div className="mb-5">
-      <h6 className="text-white">{heading}</h6>
+      <h6 className="mb-1">{heading}</h6>
       <div className="grid-2-col">{list}</div>
     </div>
   );

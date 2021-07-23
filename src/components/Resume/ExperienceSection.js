@@ -22,7 +22,7 @@ const ExperienceSection = (props) => {
 
   return (
     <section className="resume-detail-body">
-      <h4>Work Experience</h4>
+      <h5>EXPERIENCE</h5>
       {experienceList}
     </section>
   );

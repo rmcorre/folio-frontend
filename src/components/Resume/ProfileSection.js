@@ -10,7 +10,6 @@ const ProfileSection = (props) => {
       <Identity />
       <div className="d-flex justify-content-between align-items-center">
         <Contact />
-        <Avatar />
       </div>
     </section>
   );

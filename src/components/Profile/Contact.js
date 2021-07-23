@@ -6,8 +6,8 @@ const Contact = () => {
 
   return (
     <address>
-      {profile.phoneNumber} <br />
       {profile.email} <br />
+      {profile.phoneNumber} <br />
       {profile.location} <br />
     </address>
   );

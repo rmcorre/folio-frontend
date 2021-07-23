@@ -1858,7 +1858,7 @@ progress {
 
 @media (min-width: 992px) {
   .container, .container-sm, .container-md, .container-lg {
-    max-width: 100%;
+    max-width: 960px;
   }
 }
 
@@ -22960,13 +22960,27 @@ html:not([dir=rtl]) .range-slider-ui.noUi-horizontal .noUi-handle {
 
 body {
   background-color: #f7f7fc;
+  color: #5a5b75;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-weight: 500;
 }
 
 address {
   font-size: 0.8rem;
   padding: 0 20px 0 0;
-  line-height: 1.5;
   margin: 0;
+}
+
+.text-muted {
+  color: #5a5b75 !important;
 }
 
 .avatar {
@@ -22993,6 +23007,7 @@ address {
   -ms-grid-rows: (1fr)[2];
       grid-template-rows: repeat(2, 1fr);
   grid-auto-flow: row;
+  row-gap: 0.2rem;
   -webkit-column-gap: 0.313rem;
           column-gap: 0.313rem;
 }
@@ -23036,15 +23051,12 @@ address {
   line-height: 1.12;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .col-sm-5 {
     border-radius: 10px 0 0 10px;
   }
   .col-sm-7 {
     border-radius: 0 10px 10px 0;
-  }
-  .container-md {
-    max-width: 720px;
   }
 }
 /*# sourceMappingURL=customBootstrap.css.map */
