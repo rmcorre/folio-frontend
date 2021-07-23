@@ -1,7 +1,6 @@
 import React from 'react';
 import WOW from 'wow.js';
 
-// import heroImage from '../img/developer4.svg';
 import heroImage from '../img/developerResized.png';
 
 const HeroAround = () => {
@@ -25,7 +24,7 @@ const HeroAround = () => {
             Full Stack Developer
           </h2>
           <div className="wow fadeInUp text-nowrap" data-wow-delay=".7s">
-            <a className="btn btn-translucent-primary me-3" href="#">
+            <a className="btn btn-translucent-primary me-3" href="/resume">
               <i className="ai-arrow-down-circle mt-n1 me-2"></i>Download CV
             </a>
             <a

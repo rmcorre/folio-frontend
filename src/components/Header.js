@@ -35,7 +35,7 @@ const Header = (props) => {
     if (props.admin) {
       setAuthNav(<AuthNav />);
     }
-  }, []);
+  }, [props.admin]);
 
   return (
     <header

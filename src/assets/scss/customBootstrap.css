@@ -22957,4 +22957,94 @@ html:not([dir=rtl]) .range-slider-ui.noUi-horizontal .noUi-handle {
   color: #4a4b65;
   text-decoration: none;
 }
+
+body {
+  background-color: #f7f7fc;
+}
+
+address {
+  font-size: 0.8rem;
+  padding: 0 20px 0 0;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.avatar {
+  margin-left: 10%;
+  max-width: 90%;
+  max-height: 90%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.first {
+  margin-top: 1rem;
+}
+
+.last {
+  margin-bottom: 1rem;
+}
+
+.grid-2-col {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (5.313rem)[2];
+      grid-template-columns: repeat(2, 5.313rem);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  grid-auto-flow: row;
+  -webkit-column-gap: 0.313rem;
+          column-gap: 0.313rem;
+}
+
+.grid-2-col div {
+  line-height: 1.3;
+}
+
+.font-small {
+  font-size: 0.9rem;
+  line-height: 1.563rem;
+  letter-spacing: 0.004rem;
+}
+
+.resume-detail-body {
+  font-size: 0.9rem;
+  line-height: 1.2;
+  letter-spacing: 0.004rem;
+  padding: 1.75rem;
+}
+
+.resume-detail-body h4, .resume-detail-body .h4 {
+  margin: 0 0 1rem 0;
+}
+
+.resume-detail-body div:last-child hr {
+  display: none;
+}
+
+.resume-detail-body .date {
+  margin: 0 0 1rem 0;
+}
+
+.resume-detail-body .summary {
+  margin: 0 0 1rem 0;
+  line-height: 1rem;
+}
+
+.resume-detail-body .duties p {
+  margin: 0 0 0.438rem 0;
+  line-height: 1.12;
+}
+
+@media (min-width: 768px) {
+  .col-sm-5 {
+    border-radius: 10px 0 0 10px;
+  }
+  .col-sm-7 {
+    border-radius: 0 10px 10px 0;
+  }
+  .container-md {
+    max-width: 720px;
+  }
+}
 /*# sourceMappingURL=customBootstrap.css.map */
