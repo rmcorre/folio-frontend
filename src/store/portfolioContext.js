@@ -7,11 +7,18 @@ export function PortfolioContextProvider({ children }) {
   const [portfolio, setPortfolio] = useState(null);
 
   useEffect(() => {
-    // http://localhost:8080 (when on this device)
-    // http://192.168.1.73:8080 (when on another another device)
+    // http://localhost:8080 (when server is on this device)
+    // http://192.168.1.73:8080 (when server is on HP Laptop and connected to   // home wifi)
+    // https://192.168.1.73:8443 (when server is on HP Laptop, using HTTPS, and // connected to home wifi)
+
+    // Had a problem using HTTPS, even after double checking the code in
+    // SpringBoot application until I entered
+    // 'https://192.168.1.73:8443/profiles' in the browser and accepted the
+    // warning by clicking on the 'Advanced' link. Kept getting
+    // 'NET::ERR_CERT_AUTHORITY_INVALID' error.
 
     async function fetchData() {
-      const { data } = await axios.get('http://localhost:8080/profiles');
+      const { data } = await axios.get('https://192.168.1.73:8443/profiles');
       setPortfolio(data.find((profile) => profile.id === 1));
     }
 
