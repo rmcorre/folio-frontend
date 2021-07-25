@@ -1,14 +1,14 @@
 import React from 'react';
-import { usePortfolioAPI } from '../../store/portfolioContext';
+import { usePortfolioAPI } from '../../../store/portfolioContext';
 
-import Experience from '../Profile/Experience/Experience';
+import Employer from '../../Profile/Experience/Employer';
 
-const ExperienceSection = (props) => {
+const Employment = () => {
   const { experiences } = usePortfolioAPI();
 
   const experienceList = experiences.map(
     ({ id, organization, startDate, endDate, jobRole, summary, duties }) => (
-      <Experience
+      <Employer
         key={id}
         organization={organization}
         startDate={startDate}
@@ -21,11 +21,11 @@ const ExperienceSection = (props) => {
   );
 
   return (
-    <section className="resume-detail-body">
-      <h5>EXPERIENCE</h5>
+    <div>
+      <h5>EMPLOYMENT HISTORY</h5>
       {experienceList}
-    </section>
+    </div>
   );
 };
 
-export default ExperienceSection;
+export default Employment;

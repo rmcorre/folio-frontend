@@ -1,7 +1,7 @@
 import React from 'react';
-import { usePortfolioAPI } from '../../store/portfolioContext';
+import { usePortfolioAPI } from '../../../store/portfolioContext';
 
-import Education from '../Profile/Education/Education';
+import Education from '../../Profile/Education/Education';
 
 const EducationSection = (props) => {
   const { educations } = usePortfolioAPI();

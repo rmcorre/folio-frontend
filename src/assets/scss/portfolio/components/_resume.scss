@@ -1,27 +1,45 @@
-// h1,
-// h2,
-// h3,
-// h4,
-// h5,
-// h6,
-// .h1,
-// .h2,
-// .h3,
-// .h4,
-// .h5,
-// .h6 {
-//   font-weight: 500;
-// }
+.resume {
+  font-family: Raleway, sans-serif;
+  font-weight: 300;
 
-address {
-  font-size: 0.8rem;
-  padding: 0 20px 0 0;
-  // line-height: 1.5;
-  margin: 0;
+  h1,
+  h2,
+  p,
+  li {
+    font-weight: 400;
+  }
+
+  p,
+  li {
+    color: initial;
+  }
+
+  h5 {
+    letter-spacing: 0.1em;
+  }
+
+  address {
+    font-size: 0.8rem;
+    padding: 0 20px 0 0;
+    // line-height: 1.5;
+    margin: 0;
+  }
 }
 
-.font-family__raleway {
-  font-family: Raleway, san-serif;
+.py-8 {
+  padding: 8rem 0;
+}
+
+.py-9 {
+  padding: 9rem 0;
+}
+
+.name {
+  letter-spacing: 0.15em;
+}
+
+.role {
+  letter-spacing: 0.15em;
 }
 
 .text-muted {
