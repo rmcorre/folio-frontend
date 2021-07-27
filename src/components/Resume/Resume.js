@@ -3,6 +3,7 @@ import React from 'react';
 import Identity from '@Identity';
 import Summary from '@Summary';
 import History from '@History';
+import Detail from '@Detail';
 
 const Resume = () => {
   return (
@@ -12,6 +13,7 @@ const Resume = () => {
         <Identity />
         <Summary />
         <History />
+        <Detail />
       </main>
     </>
   );

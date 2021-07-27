@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
 const framework = (props) => {
   const framework = props.framework;
-  return <div>{framework}</div>;
+  return <span className="text-uppercase">{framework}</span>;
 };
 
 export default framework;

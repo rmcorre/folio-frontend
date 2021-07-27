@@ -10,11 +10,10 @@ const Education = (props) => {
 
   return (
     <div>
-      <h6>{course}</h6>
-      <div>{institution}</div>
-      <div>{date}</div>
-      <div>{country}</div>
-      <hr />
+      <h6 className="m-0">{course}</h6>
+      <h6 className="fw-light">
+        <span className="text-uppercase fs-sm">{institution}</span> | {date}
+      </h6>
     </div>
   );
 };

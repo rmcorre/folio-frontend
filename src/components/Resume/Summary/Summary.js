@@ -7,7 +7,7 @@ const Summary = () => {
     <section className="summary mb-7">
       <div className="container">
         <div className="row gx-6">
-          <div className="col-md-6">
+          <div className="col-md-6 mb-4">
             <AboutMe />
           </div>
           <div className="col-md-6">

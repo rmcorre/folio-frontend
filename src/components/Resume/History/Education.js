@@ -27,8 +27,8 @@ const EducationSection = (props) => {
   );
 
   return (
-    <section className="resume-detail-body">
-      <h5 className="text-muted">EDUCATION</h5>
+    <section>
+      <h5>EDUCATION</h5>
       {educationList}
     </section>
   );

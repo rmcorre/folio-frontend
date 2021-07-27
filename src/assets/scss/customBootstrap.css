@@ -1,9 +1,9 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700|Raleway:200,300,400,500,600&display=swap");
-@import url(c:\Users\Horacio\Desktop\Around-Portfolio\src\assets\scss\aroundTemplate\vendor\animate.css);
-@import url(c:\Users\Horacio\Desktop\Around-Portfolio\src\assets\scss\aroundTemplate\vendor\simplebar\dist\simplebar.min.css);
-@import url(c:\Users\Horacio\Desktop\Around-Portfolio\src\assets\scss\aroundTemplate\vendor\tiny-slider\dist\tiny-slider.css);
-@import url(c:\Users\Horacio\Desktop\Around-Portfolio\src\assets\scss\vendor\bitIcon\style.css);
+@import url(c:\Users\rmcor\Desktop\Around-Portfolio\src\assets\scss\aroundTemplate\vendor\animate.css);
+@import url(c:\Users\rmcor\Desktop\Around-Portfolio\src\assets\scss\aroundTemplate\vendor\simplebar\dist\simplebar.min.css);
+@import url(c:\Users\rmcor\Desktop\Around-Portfolio\src\assets\scss\aroundTemplate\vendor\tiny-slider\dist\tiny-slider.css);
+@import url(c:\Users\rmcor\Desktop\Around-Portfolio\src\assets\scss\vendor\bitIcon\style.css);
 @font-face {
   font-family: "around-icons";
   src: url("./aroundTemplate/fonts/around-icons.ttf") format("truetype");
@@ -1260,7 +1260,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #737491;
+  color: #4a4b65;
   background-color: #fff;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -3369,15 +3369,15 @@ progress {
 .table {
   --bs-table-bg: transparent;
   --bs-table-accent-bg: transparent;
-  --bs-table-striped-color: #737491;
+  --bs-table-striped-color: #4a4b65;
   --bs-table-striped-bg: rgba(0, 0, 0, 0.0375);
-  --bs-table-active-color: #737491;
+  --bs-table-active-color: #4a4b65;
   --bs-table-active-bg: rgba(0, 0, 0, 0.05);
-  --bs-table-hover-color: #737491;
+  --bs-table-hover-color: #4a4b65;
   --bs-table-hover-bg: rgba(0, 0, 0, 0.05);
   width: 100%;
   margin-bottom: 1rem;
-  color: #737491;
+  color: #4a4b65;
   vertical-align: top;
   border-color: #e9e9f2;
 }
@@ -3615,7 +3615,7 @@ progress {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #737491;
+  color: #4a4b65;
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid #dfdfeb;
@@ -3647,7 +3647,7 @@ progress {
 }
 
 .form-control:focus {
-  color: #737491;
+  color: #4a4b65;
   background-color: #fff;
   border-color: rgba(118, 109, 244, 0.35);
   outline: 0;
@@ -3746,7 +3746,7 @@ progress {
   padding: 0.5625rem 0;
   margin-bottom: 0;
   line-height: 1.5;
-  color: #737491;
+  color: #4a4b65;
   background-color: transparent;
   border: solid transparent;
   border-width: 1px 0;
@@ -3839,7 +3839,7 @@ textarea.form-control-lg {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #737491;
+  color: #4a4b65;
   background-color: #fff;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%234a4b65' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
@@ -3883,7 +3883,7 @@ textarea.form-control-lg {
 
 .form-select:-moz-focusring {
   color: transparent;
-  text-shadow: 0 0 0 #737491;
+  text-shadow: 0 0 0 #4a4b65;
 }
 
 .form-select-sm {
@@ -3979,7 +3979,7 @@ textarea.form-control-lg {
 }
 
 .form-check-label {
-  color: #737491;
+  color: #4a4b65;
 }
 
 .form-switch {
@@ -4276,7 +4276,7 @@ textarea.form-control-lg {
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.5;
-  color: #737491;
+  color: #4a4b65;
   text-align: center;
   white-space: nowrap;
   background-color: #fff;
@@ -4527,7 +4527,7 @@ textarea.form-control-lg {
   display: inline-block;
   font-weight: 500;
   line-height: 1.5;
-  color: #737491;
+  color: #4a4b65;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
@@ -4553,7 +4553,7 @@ textarea.form-control-lg {
 }
 
 .btn:hover {
-  color: #737491;
+  color: #4a4b65;
   text-decoration: none;
 }
 
@@ -5283,7 +5283,7 @@ fieldset:disabled .btn {
   padding: 0.5rem 0;
   margin: 0;
   font-size: 1rem;
-  color: #737491;
+  color: #4a4b65;
   text-align: left;
   list-style: none;
   background-color: #fff;
@@ -10246,7 +10246,7 @@ fieldset:disabled .btn {
 }
 
 .text-body {
-  color: #737491 !important;
+  color: #4a4b65 !important;
 }
 
 .text-muted {
@@ -15178,7 +15178,7 @@ button:focus {
 
 .alert-secondary,
 .alert-light {
-  color: #737491;
+  color: #4a4b65;
 }
 
 .alert-secondary .alert-link,
@@ -17221,7 +17221,7 @@ input[type='search']::-webkit-search-results-decoration {
 }
 
 .password-toggle-btn .password-toggle-indicator:hover {
-  color: #737491;
+  color: #4a4b65;
 }
 
 .password-toggle-btn .password-toggle-check {
@@ -22919,7 +22919,7 @@ dd {
 
 .range-slider-ui .noUi-value {
   padding-top: .125rem;
-  color: #737491;
+  color: #4a4b65;
   font-size: 0.8125rem;
 }
 
@@ -22963,6 +22963,10 @@ html:not([dir=rtl]) .range-slider-ui.noUi-horizontal .noUi-handle {
   font-weight: 300;
 }
 
+.resume div > :last-child {
+  margin-bottom: 0 !important;
+}
+
 .resume h1, .resume .h1,
 .resume h2,
 .resume .h2,
@@ -22973,7 +22977,7 @@ html:not([dir=rtl]) .range-slider-ui.noUi-horizontal .noUi-handle {
 
 .resume p,
 .resume li {
-  color: initial;
+  color: #4a4b65;
 }
 
 .resume h5, .resume .h5 {
@@ -23022,20 +23026,15 @@ html:not([dir=rtl]) .range-slider-ui.noUi-horizontal .noUi-handle {
   margin-bottom: 1rem;
 }
 
-.grid-2-col {
+.grid-4-col {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (5.313rem)[2];
-      grid-template-columns: repeat(2, 5.313rem);
-  -ms-grid-rows: (1fr)[2];
-      grid-template-rows: repeat(2, 1fr);
-  grid-auto-flow: row;
-  row-gap: 0.2rem;
-  -webkit-column-gap: 0.313rem;
-          column-gap: 0.313rem;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 0.5rem;
 }
 
-.grid-2-col div {
+.grid-4-col span {
   line-height: 1.3;
 }
 

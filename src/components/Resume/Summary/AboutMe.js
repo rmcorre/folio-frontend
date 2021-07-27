@@ -6,9 +6,9 @@ const AboutMe = () => {
 
   return (
     <>
-      <div className="mb-4">
+      <div>
         <h5>ABOUT ME</h5>
-        <p className="mb-0">{profile.summary}</p>
+        <p>{profile.summary}</p>
       </div>
     </>
   );

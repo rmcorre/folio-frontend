@@ -22,11 +22,14 @@ module.exports = {
       '@Education': resolve('src/components/Resume/History/Education.js'),
       '@Employment': resolve('src/components/Resume/History/Employment.js'),
       '@Employer': resolve('src/components/Profile/Experiences/Employer.js'),
-      '@SkillSetSection': resolve('src/components/Resume/SkillSetSection.js'),
-      '@Concept': resolve('src/components/Profile/Concept/Concept.js'),
-      '@Tech': resolve('src/components/Profile/Tech/Tech.js'),
-      '@Framework': resolve('src/components/Profile/Framework/Framework.js'),
-      '@Tool': resolve('src/components/Profile/Tool/Tool.js'),
+      '@Concept': resolve('src/components/Profile/Skill/Concept/Concept.js'),
+      '@Framework': resolve(
+        'src/components/Profile/Skill/Framework/Framework.js'
+      ),
+      '@Tech': resolve('src/components/Profile/Skill/Tech/Tech.js'),
+      '@Tool': resolve('src/components/Profile/Skill/Tool/Tool.js'),
+      '@Skill': resolve('src/components/Resume/Detail/Skill.js'),
+      '@Detail': resolve('src/components/Resume/Detail/Detail.js'),
     },
   },
 };
