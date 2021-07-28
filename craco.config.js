@@ -18,9 +18,13 @@ module.exports = {
       '@Summary': resolve('src/components/Resume/Summary/Summary'),
       '@AboutMe': resolve('src/components/Resume/Summary/AboutMe'),
       '@Achievements': resolve('src/components/Resume/Summary/Achievements'),
-      '@History': resolve('src/components/Resume/History/History.js'),
-      '@Education': resolve('src/components/Resume/History/Education.js'),
-      '@Employment': resolve('src/components/Resume/History/Employment.js'),
+      '@Background': resolve('src/components/Resume/Background/Background.js'),
+      '@EducationList': resolve(
+        'src/components/Resume/Background/EducationList.js'
+      ),
+      '@EmploymentList': resolve(
+        'src/components/Resume/Background/EmploymentList.js'
+      ),
       '@Employer': resolve('src/components/Profile/Experiences/Employer.js'),
       '@Concept': resolve('src/components/Profile/Skill/Concept/Concept.js'),
       '@Framework': resolve(

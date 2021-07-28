@@ -3,7 +3,7 @@ import { usePortfolioAPI } from '../../../store/portfolioContext';
 
 import Education from '../../Profile/Education/Education';
 
-const EducationSection = (props) => {
+const EducationList = (props) => {
   const { educations } = usePortfolioAPI();
 
   const educationList = educations.map(
@@ -27,11 +27,11 @@ const EducationSection = (props) => {
   );
 
   return (
-    <section>
+    <div>
       <h5>EDUCATION</h5>
       {educationList}
-    </section>
+    </div>
   );
 };
 
-export default EducationSection;
+export default EducationList;

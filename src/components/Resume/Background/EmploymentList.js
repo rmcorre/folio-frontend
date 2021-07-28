@@ -20,12 +20,7 @@ const Employment = () => {
     )
   );
 
-  return (
-    <div>
-      <h5>EMPLOYMENT HISTORY</h5>
-      {experienceList}
-    </div>
-  );
+  return <>{experienceList}</>;
 };
 
 export default Employment;

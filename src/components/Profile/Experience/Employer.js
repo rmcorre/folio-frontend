@@ -18,9 +18,9 @@ const Employer = (props) => {
   return (
     <div className="mb-5">
       <h6 className="m-0">{jobRole}</h6>
-      <h6 className="fw-light">
+      <p className="fw-light mb-2">
         <span className="text-uppercase fs-sm">{organization}</span> | {date}
-      </h6>
+      </p>
       <ul className="list-unstyled">{dutiesList}</ul>
     </div>
   );

@@ -2,7 +2,7 @@ import React from 'react';
 
 import Identity from '@Identity';
 import Summary from '@Summary';
-import History from '@History';
+import Background from '@Background';
 import Detail from '@Detail';
 
 const Resume = () => {
@@ -12,7 +12,7 @@ const Resume = () => {
       <main className="resume py-9">
         <Identity />
         <Summary />
-        <History />
+        <Background />
         <Detail />
       </main>
     </>

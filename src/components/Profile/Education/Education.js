@@ -9,11 +9,12 @@ const Education = (props) => {
   const date = startDate + ' - ' + endDate;
 
   return (
-    <div>
+    <div className="mb-4">
       <h6 className="m-0">{course}</h6>
-      <h6 className="fw-light">
-        <span className="text-uppercase fs-sm">{institution}</span> | {date}
-      </h6>
+      <p className="h6 fw-light m-0">
+        <span className="text-uppercase fs-sm">{institution}</span> | {date} |
+        <span className="text-uppercase fs-sm"> {country}</span>
+      </p>
     </div>
   );
 };
