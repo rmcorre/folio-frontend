@@ -5,7 +5,7 @@ import Summary from '@Summary';
 import Background from '@Background';
 import Detail from '@Detail';
 
-const Resume = () => {
+const ResumeMobile = () => {
   return (
     <>
       <h1 className="visually-hidden">Resume</h1>
@@ -19,4 +19,4 @@ const Resume = () => {
   );
 };
 
-export default Resume;
+export default ResumeMobile;

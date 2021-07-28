@@ -7,6 +7,7 @@ import ProtectedRoute from './components/auth/protected-route';
 // import PageLoadingSpinner from './components/PageLoadingSpinner';
 import Home from './pages/Home';
 import Resume from './components/Resume/Resume';
+import ResumeMobile from './components/Resume/ResumeMobile';
 import Admin from './pages/Admin';
 // import ContactModal from './components/ContactModal';
 // import Header from './components/Header';
@@ -27,7 +28,7 @@ function App() {
           <Home />
         </Route>
         <Route path="/resume">
-          <Resume />
+          <ResumeMobile />
         </Route>
         <ProtectedRoute path="/Admin" component={Admin} />
       </Switch>

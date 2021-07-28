@@ -27,10 +27,10 @@ const EducationList = (props) => {
   );
 
   return (
-    <div>
+    <section>
       <h5>EDUCATION</h5>
       {educationList}
-    </div>
+    </section>
   );
 };
 
