@@ -6,7 +6,6 @@ import ProtectedRoute from './components/auth/protected-route';
 // import RemoveFromDom from './components/RemoveFromDom';
 // import PageLoadingSpinner from './components/PageLoadingSpinner';
 import Home from './pages/Home';
-import Resume from './components/Resume/Resume';
 import ResumeMobile from './components/Resume/ResumeMobile';
 import Admin from './pages/Admin';
 // import ContactModal from './components/ContactModal';

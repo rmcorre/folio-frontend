@@ -1,12 +1,10 @@
 import React from 'react';
 
-import Identity from '@Identity';
-import Summary from '@Summary';
-import Background from '@Background';
-import Detail from '@Detail';
-import Skills from './Detail/Skill';
-import EducationList from './Background/EducationList';
-import EmploymentList from './Background/EmploymentList';
+import Identity from './Identity';
+import AboutMe from './AboutMe';
+import Skills from './Skills';
+import EducationList from './Education';
+import EmploymentList from './Employment';
 
 const Resume = () => {
   return (
@@ -15,17 +13,17 @@ const Resume = () => {
       <main className="resume py-9">
         <div className="container">
           <div className="row">
-            <div className="col text-center mb-7">
+            <div className="col">
               <Identity />
             </div>
           </div>
           <div className="row gx-7">
             <div className="col-md-5">
-              <Summary />
+              <AboutMe />
+              <EducationList />
               <Skills />
             </div>
             <div className="col-md-7">
-              <EducationList />
               <EmploymentList />
             </div>
           </div>

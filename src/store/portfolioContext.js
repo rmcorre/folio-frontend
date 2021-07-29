@@ -18,7 +18,7 @@ export function PortfolioContextProvider({ children }) {
     // 'NET::ERR_CERT_AUTHORITY_INVALID' error.
 
     async function fetchData() {
-      const { data } = await axios.get('http://localhost:8080/profiles');
+      const { data } = await axios.get('https://192.168.1.73:8443/profiles');
       setPortfolio(data.find((profile) => profile.id === 1));
     }
 

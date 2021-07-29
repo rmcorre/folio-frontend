@@ -18,10 +18,11 @@ const Employer = (props) => {
   return (
     <div className="mb-5">
       <h6 className="m-0">{jobRole}</h6>
-      <p className="fw-light mb-2">
+      <div className="fw-light mb-2">
         <span className="text-uppercase fs-sm">{organization}</span> | {date}
-      </p>
-      <ul className="list-unstyled">{dutiesList}</ul>
+      </div>
+      <p>{summary}</p>
+      {/* <ul className="list-unstyled"></ul> */}
     </div>
   );
 };

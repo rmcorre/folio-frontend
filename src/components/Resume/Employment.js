@@ -1,7 +1,7 @@
 import React from 'react';
-import { usePortfolioAPI } from '../../../store/portfolioContext';
+import { usePortfolioAPI } from '../../store/portfolioContext';
 
-import Employer from '../../Profile/Experience/Employer';
+import Employer from '../Profile/Experience/Employer';
 
 const Employment = () => {
   const { experiences } = usePortfolioAPI();

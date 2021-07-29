@@ -1,9 +1,9 @@
 import React from 'react';
-import { usePortfolioAPI } from '../../../store/portfolioContext';
+import { usePortfolioAPI } from '../../store/portfolioContext';
 
-import Education from '../../Profile/Education/Education';
+import Education from '../Profile/Education/Education';
 
-const EducationList = (props) => {
+const EducationList = () => {
   const { educations } = usePortfolioAPI();
 
   const educationList = educations.map(
@@ -27,9 +27,11 @@ const EducationList = (props) => {
   );
 
   return (
-    <section>
-      <h5>EDUCATION</h5>
-      {educationList}
+    <section className="education mb-5">
+      <div>
+        <h5 className="text-uppercase">Education</h5>
+        {educationList}
+      </div>
     </section>
   );
 };
