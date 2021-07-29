@@ -3,6 +3,8 @@ import axios from 'axios';
 
 const PortfolioContext = createContext();
 
+//***** SHOULD CHANGE THIS FILE NAME, FUNCION NAME, AND STATE VARIABLE TO PROFILE
+//***** A PORTFOLIO IS BASED ON A PROFILE FROM THE DATABASE
 export function PortfolioContextProvider({ children }) {
   const [portfolio, setPortfolio] = useState(null);
 
@@ -11,14 +13,14 @@ export function PortfolioContextProvider({ children }) {
     // http://192.168.1.73:8080 (when server is on HP Laptop and connected to   // home wifi)
     // https://192.168.1.73:8443 (when server is on HP Laptop, using HTTPS, and // connected to home wifi)
 
-    // Had a problem using HTTPS, even after double checking the code in
+    // 'NET::ERR_CERT_AUTHORITY_INVALID' error.
+    // Had a problem using HTTPS even after double checking the code in
     // SpringBoot application until I entered
     // 'https://192.168.1.73:8443/profiles' in the browser and accepted the
-    // warning by clicking on the 'Advanced' link. Kept getting
-    // 'NET::ERR_CERT_AUTHORITY_INVALID' error.
+    // warning by clicking on the 'Advanced' link.
 
     async function fetchData() {
-      const { data } = await axios.get('https://192.168.1.73:8443/profiles');
+      const { data } = await axios.get('http://localhost:8080/profiles');
       setPortfolio(data.find((profile) => profile.id === 1));
     }
 

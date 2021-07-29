@@ -7,10 +7,20 @@ const Employment = () => {
   const { experiences } = usePortfolioAPI();
 
   const experienceList = experiences.map(
-    ({ id, organization, startDate, endDate, jobRole, summary, duties }) => (
+    ({
+      id,
+      organization,
+      location,
+      startDate,
+      endDate,
+      jobRole,
+      summary,
+      duties,
+    }) => (
       <Employer
         key={id}
         organization={organization}
+        location={location}
         startDate={startDate}
         endDate={endDate}
         jobRole={jobRole}
