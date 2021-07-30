@@ -21,11 +21,11 @@ const Employer = (props) => {
       <h6 className="m-0">{jobRole}</h6>
       <div className="fw-light mb-0">
         <span className="text-uppercase fs-sm mb-0">
-          {organization} | {location}
+          {organization} - {location}
         </span>
       </div>
-      <div className="fw-light mb-2">
-        <span className="text-uppercase">{date}</span>
+      <div className="fw-light lh-1 mb-3">
+        <span>{date}</span>
       </div>
       <p>{summary}</p>
       {/* <ul className="list-unstyled"></ul> */}

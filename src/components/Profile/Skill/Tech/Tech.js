@@ -2,7 +2,7 @@ import React from 'react';
 
 const tech = (props) => {
   const language = props.language;
-  return <span className="text-uppercase">{language}</span>;
+  return <span className="fs-sm">{language}</span>;
 };
 
 export default tech;

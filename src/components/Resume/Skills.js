@@ -38,19 +38,19 @@ const Skills = () => {
       <div>
         <h5 className="text-uppercase">Skills</h5>
         <div>
-          <div className="mb-5">
+          <div className="mb-4">
             <h6 className="mb-1">Concepts</h6>
             <ul className="list-unstyled">{concepts}</ul>
           </div>
-          <div className="mb-5">
+          <div className="mb-4">
             <h6 className="mb-1">Tech</h6>
             <ul className="list-unstyled">{techs}</ul>
           </div>
-          <div className="mb-5">
+          <div className="mb-4">
             <h6 className="mb-1">Frameworks</h6>
             <ul className="list-unstyled">{frameworks}</ul>
           </div>
-          <div className="mb-5">
+          <div className="mb-4">
             <h6 className="mb-1">Tooling</h6>
             <ul className="list-unstyled">{tools}</ul>
           </div>

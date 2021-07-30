@@ -13,7 +13,7 @@ const EducationList = () => {
       course,
       startDate,
       endDate,
-      educationAddress: { countryRegion },
+      educationAddress: { townCity, countryRegion },
     }) => (
       <Education
         key={id}
@@ -21,6 +21,7 @@ const EducationList = () => {
         course={course}
         startDate={startDate}
         endDate={endDate}
+        city={townCity}
         country={countryRegion}
       />
     )
