@@ -26,6 +26,7 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
+    "postbuild": "purgecss --css build/static/css/*.css --content build/index.html build/static/js/*.js --output build/static/css",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -45,5 +46,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "glob-all": "^3.2.1",
+    "purgecss-webpack-plugin": "^4.0.3"
   }
 }

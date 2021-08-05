@@ -1,4 +1,6 @@
 const path = require('path');
+const glob = require('glob-all');
+const PurgecssPlugin = require('purgecss-webpack-plugin');
 
 const resolve = (relativePath) => {
   return path.resolve(__dirname, relativePath);
@@ -35,5 +37,20 @@ module.exports = {
       '@Skill': resolve('src/components/Resume/Detail/Skill.js'),
       '@Detail': resolve('src/components/Resume/Detail/Detail.js'),
     },
+    plugins: [
+      new PurgecssPlugin({
+        paths: [
+          resolve('public/index.html'),
+          ...glob.sync(`${resolve('src')}/**/**/*`, { nodir: true }),
+        ],
+        safelist: [
+          'tns-carousel-wrapper',
+          'tns-carousel-inner',
+          'shape',
+          'shape-bottom',
+          'shape-curve',
+        ],
+      }),
+    ],
   },
 };
