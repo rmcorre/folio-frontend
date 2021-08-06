@@ -49,7 +49,6 @@
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^4.0.3",
-    "glob-all": "^3.2.1",
-    "purgecss-webpack-plugin": "^4.0.3"
+    "glob-all": "^3.2.1"
   }
 }
