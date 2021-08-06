@@ -19,6 +19,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "shufflejs": "^5.4.1",
+    "simplebar": "^5.3.5",
     "web-vitals": "^1.0.1",
     "wow.js": "^1.2.2"
   },

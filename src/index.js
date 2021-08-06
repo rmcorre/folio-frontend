@@ -5,6 +5,8 @@ import { BrowserRouter } from 'react-router-dom';
 import Auth0ProviderWithHistory from './components/auth/auth0-provider-with-history';
 import reportWebVitals from './reportWebVitals';
 
+import 'simplebar';
+
 import './assets/scss/customBootstrap.css';
 
 ReactDOM.render(
