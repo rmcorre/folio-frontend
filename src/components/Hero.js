@@ -1,6 +1,7 @@
 import React from 'react';
 import WOW from 'wow.js';
 
+import '../../node_modules/animate.css/animate.css';
 import heroImage from '../img/developerResized.png';
 
 const HeroAround = () => {
@@ -12,18 +13,21 @@ const HeroAround = () => {
       <div className="row align-items-center">
         <div className="col-lg-4 col-md-5 order-md-1 order-2 text-md-start text-center">
           <h1
-            className="wow fadeInUp display-4 mb-lg-4 mb-3"
+            className="wow animate-fadeInUp display-4 mb-lg-4 mb-3"
             data-wow-delay=".3s"
           >
             Hey, <br /> I’m Horacio
           </h1>
           <h2
-            className="wow fadeInUp mb-lg-5 mb-4 text-muted"
+            className="wow animate-fadeInUp mb-lg-5 mb-4 text-muted"
             data-wow-delay=".5s"
           >
             Full Stack Developer
           </h2>
-          <div className="wow fadeInUp text-nowrap" data-wow-delay=".7s">
+          <div
+            className="wow animate-fadeInUp text-nowrap"
+            data-wow-delay=".7s"
+          >
             <a className="btn btn-translucent-primary me-3" href="/resume">
               <i className="ai-arrow-down-circle mt-n1 me-2"></i>Download CV
             </a>
