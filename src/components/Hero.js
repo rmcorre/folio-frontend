@@ -2,7 +2,7 @@ import React from 'react';
 import WOW from 'wow.js';
 
 import '../../node_modules/animate.css/animate.css';
-import heroImage from '../img/developerResized.png';
+import heroImage from '../img/hero/developerResized.png';
 
 const HeroAround = () => {
   const wow = new WOW();

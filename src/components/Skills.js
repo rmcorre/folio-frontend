@@ -1,15 +1,7 @@
 import React from 'react';
 import WOW from 'wow.js';
 
-import illustration from '../img/skills.svg';
-import icon1 from '../img/services/01.svg';
-import icon2 from '../img/services/02.svg';
-import icon3 from '../img/services/03.svg';
-import html5Logo from '../img/skills/html5LogoOptimized.svg';
-import css3Logo from '../img/skills/css3LogoOptimized.svg';
-import jsLogo from '../img/skills/jsLogoOptimized.svg';
-import bootstrapIcon from '../img/skills/bootstrapLogoOptimized.svg';
-import sassIcon from '../img/skills/sassSealLogoOptimized.svg';
+import illustration from '../img/skills/skills.svg';
 
 const Services = () => {
   const wow = new WOW();

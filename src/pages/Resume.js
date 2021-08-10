@@ -1,10 +1,10 @@
 import React from 'react';
 
-import Identity from './Identity';
-import AboutMe from './AboutMe';
-import Skills from './Skills';
-import EducationList from './Education';
-import EmploymentList from './Employment';
+import Identity from '../components/Resume/Identity';
+import AboutMe from '../components/Resume/AboutMe';
+import Skills from '../components/Resume/Skills';
+import EducationList from '../components/Resume/Education';
+import EmploymentList from '../components/Resume/Employment';
 
 const Resume = () => {
   return (
