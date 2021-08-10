@@ -20,7 +20,7 @@ export function PortfolioContextProvider({ children }) {
     // warning by clicking on the 'Advanced' link.
 
     async function fetchData() {
-      const { data } = await axios.get('http://localhost:8080/profiles');
+      const { data } = await axios.get('https://192.168.1.73:8443/profiles');
       setPortfolio(data.find((profile) => profile.id === 1));
     }
 
