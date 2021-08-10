@@ -28,84 +28,36 @@ const Services = () => {
                 className="wow fadeInUp d-md-flex align-items-start d-block mb-4 pb-2"
                 data-wow-delay=".5s"
               >
-                {/* <img className="me-md-4 mb-md-0 mb-4" src={icon1} alt="Icon" /> */}
                 <div className="ps-md-2">
                   <h3 className="h6 mb-2">Front End</h3>
-                  <div className="d-flex flex-wrap text-primary">
-                    <img src={html5Logo} />
-                    <img src={css3Logo} />
-                    <img src={jsLogo} />
-                    <img src={bootstrapIcon} />
-                    <img src={sassIcon} />
-                  </div>
+                  <div className="d-flex flex-wrap text-primary"></div>
                 </div>
               </div>
-              {/* <div
-                className="wow fadeInUp d-md-flex align-items-start d-block mb-4 pb-2"
-                data-wow-delay=".7s"
-              >
-                <img className="me-md-4 mb-md-0 mb-4" src={icon2} alt="Icon" />
-                <div className="ps-md-2">
-                  <h3 className="h6 mb-2">UI/UX</h3>
-                  <p className="mb-0 fs-sm">
-                    Design and develop user interactions on web pages.
-                  </p>
-                </div>
-              </div> */}
               <div
                 className="wow fadeInUp d-md-flex align-items-start d-block mb-4 pb-2"
                 data-wow-delay="1s"
               >
-                {/* <img className="me-md-4 mb-md-0 mb-4" src={icon3} alt="Icon" /> */}
                 <div className="ps-md-2">
                   <h3 className="h6 mb-2">Back End</h3>
-                  <div className="d-flex flex-wrap text-primary">
-                    <img src={html5Logo} />
-                    <img src={css3Logo} />
-                    <img src={jsLogo} />
-                    <img src={bootstrapIcon} />
-                    <img src={sassIcon} />
-                  </div>
+                  <div className="d-flex flex-wrap text-primary"></div>
                 </div>
               </div>
-              {/* <div
-                className="wow fadeInUp d-md-flex align-items-start d-block mb-4 pb-2"
-                data-wow-delay="1s"
-              >
-                <img className="me-md-4 mb-md-0 mb-4" src={icon3} alt="Icon" />
-                <div className="ps-md-2">
-                  <h3 className="h6 mb-2">REST</h3>
-                  <p className="mb-0 fs-sm">
-                    Develop and design RESTful services and APIs.
-                  </p>
-                </div>
-              </div> */}
               <div
                 className="wow fadeInUp d-md-flex align-items-start d-block mb-4 pb-2"
                 data-wow-delay="1s"
               >
-                {/* <img className="me-md-4 mb-md-0 mb-4" src={icon3} alt="Icon" /> */}
                 <div className="ps-md-2">
                   <h3 className="h6 mb-2">Best Practices</h3>
-                  <p className="mb-0 fs-sm">
-                    Ensure that non-functional requirements such as security,
-                    performance, maintainability, scalability, usability, and
-                    reliability are being considered when architecting
-                    solutions.
-                  </p>
+                  <p className="mb-0 fs-sm"></p>
                 </div>
               </div>
               <div
                 className="wow fadeInUp d-md-flex align-items-start d-block"
                 data-wow-delay="1s"
               >
-                {/* <img className="me-md-4 mb-md-0 mb-4" src={icon3} alt="Icon" /> */}
                 <div className="ps-md-2">
                   <h3 className="h6 mb-2">Ambition and Curiosity</h3>
-                  <p className="mb-0 fs-sm">
-                    Keep job knowledge up-to-date by studying new development
-                    tools and programming techniques.
-                  </p>
+                  <p className="mb-0 fs-sm"></p>
                 </div>
               </div>
             </div>
@@ -119,14 +71,6 @@ const Services = () => {
           </div>
         </div>
       </div>
-      {/* <div className="shape shape-top shape-curve bg-body">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3000 185.4">
-          <path
-            fill="currentColor"
-            d="M3000,185.4V0H0v185.4C496.4,69.8,996.4,12,1500,12S2503.6,69.8,3000,185.4z"
-          ></path>
-        </svg>
-      </div> */}
     </section>
   );
 };

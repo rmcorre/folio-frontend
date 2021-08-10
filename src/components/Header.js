@@ -126,7 +126,7 @@ const Header = (props) => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/admin" data-bs-toggle="dropdown">
+                <a className="nav-link" href="/admin">
                   Admin
                 </a>
               </li>
