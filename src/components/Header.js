@@ -5,7 +5,7 @@ import AuthNav from '../components/auth/AuthNav';
 // eslint-disable-next-line no-unused-vars
 import { Modal } from 'bootstrap';
 
-import logo from '../img/logo/hcLogo2.svg';
+import logo from '../img/logo/hcLogoMaster.svg';
 
 const Header = (props) => {
   const header = useRef(null); // Is this required?
@@ -73,7 +73,7 @@ const Header = (props) => {
         </button>
         <a
           className="navbar-brand flex-shrink-0 order-lg-1 mx-auto ms-lg-0 pe-lg-2 me-lg-4"
-          href="index.html"
+          href="/"
         >
           <img
             className="d-none d-lg-block"
