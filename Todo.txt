@@ -20,3 +20,6 @@ August 9, 2021
         implement the same code in the Portfolio component. That way, I
         can add it as an import to the component and remove the script
         entry in index.html.
+
+August 10. 2021
+  Need to add .env file with Auth0 credentials. Accidentally deleted on remote so was deleted on local.
