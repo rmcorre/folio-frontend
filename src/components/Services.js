@@ -3,7 +3,6 @@ import WOW from 'wow.js';
 
 import illustration from '../img/services/team_work3.png';
 import icon1 from '../img/services/01.svg';
-import icon2 from '../img/services/02.svg';
 import icon3 from '../img/services/03.svg';
 
 const Services = () => {

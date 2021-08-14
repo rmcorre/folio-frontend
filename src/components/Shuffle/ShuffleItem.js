@@ -1,13 +1,21 @@
 import React from 'react';
 
-const ShufflePhotoItem = ({ id, username, category, src, name, dataGroup }) => {
+const ShufflePhotoItem = ({
+  id,
+  username,
+  category,
+  src,
+  href,
+  name,
+  dataGroup,
+}) => {
   return (
     <article
       key={id}
       className="masonry-grid-item"
       data-groups={`["${dataGroup}"]`}
     >
-      <a className="card card-hover h-100 border-0 shadow" href="#">
+      <a className="card card-hover h-100 border-0 shadow" href={href}>
         <img className="card-img-top" src={src} alt="Article image" />
         <div className="card-body text-center">
           <h3 className="h5 mb-1">{name}</h3>
