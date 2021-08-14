@@ -23,11 +23,11 @@ const Portfolio = () => {
           <ShuffleFilter />
           <ShuffleGrid />
         </div>
-        <div className="pt-3 text-center">
+        {/* <div className="pt-3 text-center">
           <a className="btn btn-primary" href="#">
             <i className="ai-refresh-cw me-2"></i>Load more
           </a>
-        </div>
+        </div> */}
       </div>
     </section>
   );

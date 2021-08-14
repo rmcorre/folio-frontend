@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import ShuffleItem from './ShuffleItem';
 
-import apologeticRobot from '../../img/portfolio/01.jpg';
-import womanWalking from '../../img/portfolio/02.jpg';
-import oilBottle from '../../img/portfolio/03.jpg';
+// import apologeticRobot from '../../img/portfolio/01.jpg';
+// import womanWalking from '../../img/portfolio/02.jpg';
+// import oilBottle from '../../img/portfolio/03.jpg';
+import folioFrontend from '../../img/portfolio/folioFrontend.svg';
+import folioBackend from '../../img/portfolio/folioBackend.svg';
+import react from '../../img/portfolio/react.svg';
 import smilingWoman from '../../img/portfolio/04.jpg';
 import drink from '../../img/portfolio/05.jpg';
 import love from '../../img/portfolio/06.jpg';
@@ -11,27 +14,29 @@ import love from '../../img/portfolio/06.jpg';
 const photosArray = [
   {
     key: 1,
-    username: '@apologeticRobot',
-    name: 'Apologetic Robot',
-    category: 'Branding',
-    src: apologeticRobot,
-    dataGroup: 'branding',
+    username: '@folioFrontend',
+    name: 'Front-end for this portfolio project',
+    category: 'Front-end',
+    src: folioFrontend,
+    href: 'https://github.com/rmcorre/folio-frontend',
+    dataGroup: 'front-end',
   },
   {
     key: 2,
-    username: '@womanWalking',
-    name: 'Woman Walking',
-    category: 'Illustrations',
-    src: womanWalking,
-    dataGroup: 'illustrations',
+    username: '@folioBackend',
+    name: 'Back-end for this portfolio project',
+    category: 'Back-end',
+    src: folioBackend,
+    href: 'https://github.com/rmcorre/folio-backend',
+    dataGroup: 'back-end',
   },
   {
     key: 3,
-    username: '@oilBottle',
-    name: 'Oil Bottle',
-    category: 'Branding',
-    src: oilBottle,
-    dataGroup: 'branding',
+    username: '@react',
+    name: 'React - The Complete Guide Projects',
+    category: 'Front-end',
+    src: react,
+    dataGroup: 'front-end',
   },
   {
     key: 4,

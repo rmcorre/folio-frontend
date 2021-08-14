@@ -9,7 +9,7 @@ const Footer = () => {
           className="nav-link-style"
           href="https://createx.studio/"
           target="_blank"
-          rel="noopener"
+          rel="noreferrer"
         >
           Createx Studio
         </a>

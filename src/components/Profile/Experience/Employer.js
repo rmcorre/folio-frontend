@@ -9,12 +9,12 @@ const Employer = (props) => {
   const date = startDate + ' - ' + endDate;
   const summary = props.summary;
 
-  const result = props.duties.split(';');
-  const dutiesList = result.map((duty, index) => (
-    <li className="mb-0" key={index}>
-      {duty}
-    </li>
-  ));
+  // const result = props.duties.split(';');
+  // const dutiesList = result.map((duty, index) => (
+  //   <li className="mb-0" key={index}>
+  //     {duty}
+  //   </li>
+  // ));
 
   return (
     <div className="mb-5">

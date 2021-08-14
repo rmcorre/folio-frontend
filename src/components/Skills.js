@@ -20,8 +20,28 @@ const Services = () => {
                 className="wow fadeInUp d-md-flex align-items-start d-block mb-4 pb-2"
                 data-wow-delay=".5s"
               >
-                <div className="ps-md-2">
-                  <h3 className="h6 mb-2">Front End</h3>
+                <div>
+                  {/* <h3 className="h6 mb-2">Front End</h3> */}
+                  <i
+                    className="bitIcon-js-sq"
+                    style={{ color: '#bfbfbf', fontSize: 60 }}
+                  ></i>
+                  <i
+                    className="bitIcon-html5-sq"
+                    style={{ color: '#bfbfbf', fontSize: 60 }}
+                  ></i>
+                  <i
+                    className="bitIcon-css3-sq"
+                    style={{ color: '#bfbfbf', fontSize: 60 }}
+                  ></i>
+                  <i
+                    className="bitIcon-sass-seal-sq"
+                    style={{ color: '#bfbfbf', fontSize: 60 }}
+                  ></i>
+                  <i
+                    className="bitIcon-java-sq"
+                    style={{ color: '#bfbfbf', fontSize: 60 }}
+                  ></i>
                   <div className="d-flex flex-wrap text-primary"></div>
                 </div>
               </div>
@@ -30,7 +50,7 @@ const Services = () => {
                 data-wow-delay="1s"
               >
                 <div className="ps-md-2">
-                  <h3 className="h6 mb-2">Back End</h3>
+                  {/* <h3 className="h6 mb-2">Back End</h3> */}
                   <div className="d-flex flex-wrap text-primary"></div>
                 </div>
               </div>
@@ -39,7 +59,7 @@ const Services = () => {
                 data-wow-delay="1s"
               >
                 <div className="ps-md-2">
-                  <h3 className="h6 mb-2">Best Practices</h3>
+                  {/* <h3 className="h6 mb-2">Best Practices</h3> */}
                   <p className="mb-0 fs-sm"></p>
                 </div>
               </div>
@@ -48,7 +68,7 @@ const Services = () => {
                 data-wow-delay="1s"
               >
                 <div className="ps-md-2">
-                  <h3 className="h6 mb-2">Ambition and Curiosity</h3>
+                  {/* <h3 className="h6 mb-2">Ambition and Curiosity</h3> */}
                   <p className="mb-0 fs-sm"></p>
                 </div>
               </div>
