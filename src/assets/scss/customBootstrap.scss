@@ -1259,9 +1259,7 @@ $utilities: map-merge(
 @import './aroundTemplate/components/widgets';
 
 // Vendor imports
-// @import './aroundTemplate/vendor/animate';
 @import '../../../node_modules/animate.css/animate.compat';
-// @import './aroundTemplate/vendor/tiny-slider/dist/tiny-slider';
 @import './vendor/bitIcon/style.css';
 @import '../../../node_modules/simplebar/dist/simplebar.css';
 @import '../../../node_modules/tiny-slider/dist/tiny-slider.css';
