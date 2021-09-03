@@ -1225,21 +1225,15 @@ $utilities: map-merge(
 // Around Template
 @import './aroundTemplate/mixins';
 @import './aroundTemplate/reboot';
-// @import './aroundTemplate/components/accordion';
-// @import './aroundTemplate/components/alert';
 @import './aroundTemplate/components/animations';
 @import './aroundTemplate/components/badge';
-// @import './aroundTemplate/components/breadcrumb';
 @import './aroundTemplate/components/button-group';
 @import './aroundTemplate/components/buttons';
 @import './aroundTemplate/components/card';
 @import './aroundTemplate/components/carousel';
-// @import './aroundTemplate/components/charts';
 @import './aroundTemplate/components/code';
 @import './aroundTemplate/components/comments';
-@import './aroundTemplate/components/countdown';
 @import './aroundTemplate/components/custom-scrollbar';
-@import './aroundTemplate/components/date-picker';
 @import './aroundTemplate/components/dropdown';
 @import './aroundTemplate/components/forms';
 @import './aroundTemplate/components/frames';
@@ -1257,16 +1251,11 @@ $utilities: map-merge(
 @import './aroundTemplate/components/pagination';
 @import './aroundTemplate/components/parallax';
 @import './aroundTemplate/components/popover';
-@import './aroundTemplate/components/pricing';
 @import './aroundTemplate/components/shape';
 @import './aroundTemplate/components/shapes';
-@import './aroundTemplate/components/shop';
 @import './aroundTemplate/components/sidebar';
 @import './aroundTemplate/components/social-buttons';
-@import './aroundTemplate/components/tables';
-@import './aroundTemplate/components/toasts';
 @import './aroundTemplate/components/type';
-@import './aroundTemplate/components/video-button';
 @import './aroundTemplate/components/widgets';
 
 // Vendor imports
