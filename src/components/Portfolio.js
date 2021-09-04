@@ -17,7 +17,7 @@ const Portfolio = () => {
       <div className="container py-lg-7 py-md-6 py-5 my-2 my-md-0">
         <h2 className="mb-3 text-center">My portfolio</h2>
         <p className="mb-4 pb-md-2 text-muted text-center">
-          Most recent projects I an working on or have completed
+          Most recent projects I am working on or have completed
         </p>
         <div className="masonry-filterable">
           <ShuffleFilter />

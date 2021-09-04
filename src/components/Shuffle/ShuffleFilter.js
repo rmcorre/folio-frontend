@@ -10,13 +10,13 @@ const ShuffleFilter = () => {
           </a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#" data-group="illustrations">
-            Illustrations
+          <a className="nav-link" href="#" data-group="frontEnd">
+            Front End
           </a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#" data-group="packaging">
-            Packaging
+          <a className="nav-link" href="#" data-group="backEnd">
+            Back End
           </a>
         </li>
         <li className="nav-item">
