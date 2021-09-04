@@ -1,3 +1,4 @@
+@import '../../../node_modules/@fontsource/inter/variable.css';
 // Custom.scss
 // Option B: Include parts of Bootstrap
 
@@ -176,14 +177,14 @@ $zindex-offcanvas: 1080;
 //
 // Font, line-height, and color for body text, headings, and more.
 
-$path-to-fonts: 'https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700|Raleway:200,300,400,500,600&display=swap';
+// $path-to-fonts: 'https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700&display=swap';
 $icons-font-family: 'around-icons';
 $icons-font-path: './aroundTemplate/fonts';
 
 // Import theme icon font set
 @import './aroundTemplate/components/icons';
 
-$font-family-sans-serif: 'Inter', sans-serif;
+$font-family-sans-serif: 'InterVariable', sans-serif;
 $headings-color: $gray-800;
 
 $font-size-base: 1rem;
