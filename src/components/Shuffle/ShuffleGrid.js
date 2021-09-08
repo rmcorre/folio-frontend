@@ -1,17 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import ShuffleItem from './ShuffleItem';
 
-// import apologeticRobot from '../../img/portfolio/01.jpg';
-// import womanWalking from '../../img/portfolio/02.jpg';
-// import oilBottle from '../../img/portfolio/03.jpg';
 import folioFrontend from '../../img/portfolio/folioFrontend.svg';
 import folioBackend from '../../img/portfolio/folioBackend.svg';
 import react from '../../img/portfolio/react.svg';
-import smilingWoman from '../../img/portfolio/04.jpg';
-import drink from '../../img/portfolio/05.jpg';
-import love from '../../img/portfolio/06.jpg';
+import placeholder from '../../img/portfolio/placeholder.svg';
 
-const photosArray = [
+const projectsArray = [
   {
     key: 1,
     username: '@folioFrontend',
@@ -33,39 +28,40 @@ const photosArray = [
   {
     key: 3,
     username: '@react',
-    name: 'React - The Complete Guide Projects',
+    name: 'React Course Projects',
     category: 'Front End',
     src: react,
-    dataGroup: 'frontEnd',
+    href: 'https://github.com/rmcorre/react-the-complete-guide-projects',
+    dataGroup: 'react',
   },
   {
     key: 4,
-    username: '@smilingWoman',
-    name: 'Smiling Woman',
-    category: 'Illustrations',
-    src: smilingWoman,
-    dataGroup: 'illustrations',
+    username: '@placeholder4',
+    name: 'Place Holder',
+    category: 'Front End',
+    src: placeholder,
+    dataGroup: 'frontEnd',
   },
   {
     key: 5,
-    username: '@drink',
-    name: 'Drink',
-    category: 'Packaging',
-    src: drink,
-    dataGroup: 'packaging',
+    username: '@placeholder5',
+    name: 'Place Holder',
+    category: 'Back End',
+    src: placeholder,
+    dataGroup: 'backEnd',
   },
   {
     key: 6,
-    username: '@love',
-    name: 'Love',
-    category: 'Illustrations',
-    src: love,
-    dataGroup: 'illustrations',
+    username: '@placeholder6',
+    name: 'Place Holder',
+    category: 'React',
+    src: placeholder,
+    dataGroup: 'react',
   },
 ];
 
 const ShuffleGrid = () => {
-  const [photos, setPhotos] = useState([]);
+  const [projects, setProjects] = useState([]);
 
   // When the ShuffleGrid component first mounts
   // add the ShufflePhotoItem markup without photos being
@@ -77,13 +73,13 @@ const ShuffleGrid = () => {
   // initialized. Now it is safe to show the photos with setPhotos.
 
   useEffect(() => {
-    setPhotos(photosArray);
+    setProjects(projectsArray);
   }, []);
 
   return (
     <div className="masonry-grid" data-columns="3">
-      {photos.map((photo) => (
-        <ShuffleItem {...photo} />
+      {projects.map((project) => (
+        <ShuffleItem {...project} />
       ))}
     </div>
   );

@@ -20,8 +20,8 @@ const ShuffleFilter = () => {
           </a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#" data-group="branding">
-            Branding
+          <a className="nav-link" href="#" data-group="react">
+            React
           </a>
         </li>
       </ul>
