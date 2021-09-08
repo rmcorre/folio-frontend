@@ -1,8 +1,8 @@
 import React from 'react';
-import { usePortfolioAPI } from '../../store/portfolioContext';
+import { useProfileAPI } from '../../store/profileContext';
 
 const AboutMe = () => {
-  const { profile } = usePortfolioAPI();
+  const { profile } = useProfileAPI();
 
   return (
     <section className="about-me mb-5">

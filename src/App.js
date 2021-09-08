@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { PortfolioContextProvider } from './store/portfolioContext';
+import { ProfileContextProvider } from './store/profileContext';
 import ProtectedRoute from './components/auth/protected-route';
 
 // import RemoveFromDom from './components/RemoveFromDom';
@@ -21,7 +21,7 @@ import Admin from './pages/Admin';
 
 function App() {
   return (
-    <PortfolioContextProvider>
+    <ProfileContextProvider>
       <Switch>
         <Route path="/" exact>
           <Home />
@@ -31,7 +31,7 @@ function App() {
         </Route>
         <ProtectedRoute path="/Admin" component={Admin} />
       </Switch>
-    </PortfolioContextProvider>
+    </ProfileContextProvider>
   );
 }
 
