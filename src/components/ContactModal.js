@@ -1,6 +1,7 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 
-const ContactModal = () => {
+const Modal = (props) => {
   return (
     <div className="modal fade" id="modal-contact" tabIndex="-1">
       <div className="modal-dialog modal-dialog-centered">
@@ -91,6 +92,14 @@ const ContactModal = () => {
         </div>
       </div>
     </div>
+  );
+};
+
+const ContactModal = () => {
+  return (
+    <>
+      {ReactDOM.createPortal(<Modal />, document.getElementById('modal-root'))}
+    </>
   );
 };
 
