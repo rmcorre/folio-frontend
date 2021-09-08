@@ -26,6 +26,7 @@ export function ProfileContextProvider({ children }) {
   }, []);
 
   if (profile === null) {
+    console.log('Error: Context is null');
     return null;
   }
 
