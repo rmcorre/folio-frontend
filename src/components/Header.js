@@ -8,10 +8,9 @@ import { Modal } from 'bootstrap';
 import logo from '../img/logo/hcLogoMaster.svg';
 
 const Header = (props) => {
-  const header = useRef(null); // Is this required?
-
   const [navbarStuck, setNavbarStuck] = useState('');
   const [authNav, setAuthNav] = useState('');
+  const header = useRef(null);
 
   const handleScroll = (e) => {
     if (e.currentTarget.pageYOffset > 500) {
