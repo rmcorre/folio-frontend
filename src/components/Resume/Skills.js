@@ -1,5 +1,5 @@
 import React from 'react';
-import { usePortfolioAPI } from '../../store/portfolioContext';
+import { useProfileAPI } from '../../store/profileContext';
 
 import Concept from '@Concept';
 import Framework from '@Framework';
@@ -7,7 +7,7 @@ import Tech from '@Tech';
 import Tool from '@Tool';
 
 const Skills = () => {
-  const { skillSet } = usePortfolioAPI();
+  const { skillSet } = useProfileAPI();
 
   const concepts = skillSet.concepts.map(({ id, concept }) => (
     <li>

@@ -1,10 +1,10 @@
 import React from 'react';
-import { usePortfolioAPI } from '../../store/portfolioContext';
+import { useProfileAPI } from '../../store/profileContext';
 
 import Education from '../Profile/Education/Education';
 
 const EducationList = () => {
-  const { educations } = usePortfolioAPI();
+  const { educations } = useProfileAPI();
 
   const educationList = educations.map(
     ({
