@@ -3,7 +3,7 @@ import WOW from 'wow.js';
 
 import illustration from '../img/skills/skills.svg';
 
-const Services = () => {
+const Skills = () => {
   const wow = new WOW();
   wow.init();
 
@@ -87,4 +87,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default Skills;
