@@ -31,57 +31,30 @@ const Services = () => {
               >
                 <img className="me-md-4 mb-md-0 mb-4" src={icon1} alt="Icon" />
                 <div className="ps-md-2">
-                  {/* <h3 className="h6 mb-2">Front End</h3> */}
                   <p className="mb-2 fs-sm">
                     Visually appealing front-end development, including
                     translation of designer mock-ups and wireframes into code.
                   </p>
                 </div>
               </div>
-              {/* <div
+              <div
                 className="wow fadeInUp d-md-flex align-items-start d-block mb-4 pb-2"
                 data-wow-delay=".7s"
               >
-                <img className="me-md-4 mb-md-0 mb-4" src={icon2} alt="Icon" />
-                <div className="ps-md-2">
-                  <h3 className="h6 mb-2">UI/UX</h3>
-                  <p className="mb-0 fs-sm">
-                    Design and develop user interactions on web pages.
-                  </p>
-                </div>
-              </div> */}
-              <div
-                className="wow fadeInUp d-md-flex align-items-start d-block mb-4 pb-2"
-                data-wow-delay="1s"
-              >
                 <img className="me-md-4 mb-md-0 mb-4" src={icon3} alt="Icon" />
                 <div className="ps-md-2">
-                  {/* <h3 className="h6 mb-2">Back End</h3> */}
                   <p className="mb-2 fs-sm">
                     Functional databases, applications and servers. Develop and
                     design RESTful services and APIs.
                   </p>
                 </div>
               </div>
-              {/* <div
-                className="wow fadeInUp d-md-flex align-items-start d-block mb-4 pb-2"
-                data-wow-delay="1s"
-              >
-                <img className="me-md-4 mb-md-0 mb-4" src={icon3} alt="Icon" />
-                <div className="ps-md-2">
-                  <h3 className="h6 mb-2">REST</h3>
-                  <p className="mb-0 fs-sm">
-                    Develop and design RESTful services and APIs.
-                  </p>
-                </div>
-              </div> */}
               <div
                 className="wow fadeInUp d-md-flex align-items-start d-block mb-4 pb-2"
-                data-wow-delay="1s"
+                data-wow-delay=".9s"
               >
                 <img className="me-md-4 mb-md-0 mb-4" src={icon3} alt="Icon" />
                 <div className="ps-md-2">
-                  {/* <h3 className="h6 mb-2">Best Practices</h3> */}
                   <p className="mb-0 fs-sm">
                     Ensure non-functional requirements such as security,
                     performance, maintainability, scalability, usability, and
@@ -92,11 +65,10 @@ const Services = () => {
               </div>
               <div
                 className="wow fadeInUp d-md-flex align-items-start d-block"
-                data-wow-delay="1s"
+                data-wow-delay="1.1s"
               >
                 <img className="me-md-4 mb-md-0 mb-4" src={icon3} alt="Icon" />
                 <div className="ps-md-2">
-                  {/* <h3 className="h6 mb-2">Ambition and Curiosity</h3> */}
                   <p className="mb-0 fs-sm">
                     Keep job knowledge up-to-date by learning new development
                     tools and programming techniques.
