@@ -4,6 +4,8 @@ import bgShape from '../img/socials/bg-shape.png';
 import figure1 from '../img/socials/figure-1.png';
 import figure2 from '../img/socials/figure-2.png';
 import figure3 from '../img/socials/figure-3.png';
+import github from '../img/socials/github.svg';
+import linkedin from '../img/socials/linkedin.svg';
 
 const Socials = () => {
   return (
@@ -32,18 +34,30 @@ const Socials = () => {
           <h2 className="mb-4 pb-sm-3 text-center">Follow me</h2>
           <div className="text-center">
             <a
-              className="btn btn-lg text-white mb-2 me-sm-4 me-2"
-              href="#"
-              style={{ backgroundColor: '#ea4c89' }}
+              className="btn btn-pink btn-lg text-white mb-2 me-sm-4 me-2"
+              href="https://github.com/rmcorre"
             >
-              <i className="ai-dribbble lead me-2"></i>Dribbble
+              <img
+                className="me-2"
+                src={github}
+                width="16"
+                height="16"
+                alt="Github Icon"
+              ></img>
+              Github
             </a>
             <a
-              className="btn btn-lg text-white mb-2"
-              href="#"
-              style={{ backgroundColor: '#1969ff' }}
+              className="btn btn-blue btn-lg text-white mb-2"
+              href="https://linkedin.com/in/horaciocorreia"
             >
-              <i className="ai-behance lead me-2"></i>Behance
+              <img
+                className="me-2"
+                src={linkedin}
+                width="16"
+                height="16"
+                alt="LinkedIn Icon"
+              ></img>
+              LinkedIn
             </a>
           </div>
         </div>
