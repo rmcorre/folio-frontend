@@ -33,6 +33,8 @@ $warning: #ffb15c;
 $danger: #f74f78;
 $light: $white;
 $dark: $gray-900;
+$pink: #ea4c89;
+$blue: #1969ff;
 
 // Adding new color to default Bootstrap's $theme-colors map
 $theme-colors: (
@@ -44,6 +46,8 @@ $theme-colors: (
   'danger': $danger,
   'light': $light,
   'dark': $dark,
+  'pink': $pink,
+  'blue': $blue,
 );
 
 // Faded colors map
