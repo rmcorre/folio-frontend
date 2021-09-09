@@ -1,10 +1,10 @@
 @charset "UTF-8";
-@import url(c:\Users\rmcor\Desktop\folio-frontend\node_modules\@fontsource\inter\variable.css);
-@import url(c:\Users\rmcor\Desktop\folio-frontend\node_modules\animate.css\animate.compat.css);
-@import url(c:\Users\rmcor\Desktop\folio-frontend\src\assets\scss\vendor\bitIcon\style.css);
-@import url(c:\Users\rmcor\Desktop\folio-frontend\node_modules\simplebar\dist\simplebar.css);
-@import url(c:\Users\rmcor\Desktop\folio-frontend\node_modules\tiny-slider\dist\tiny-slider.css);
-@import url(c:\Users\rmcor\Desktop\folio-frontend\node_modules\@fontsource\raleway\variable.css);
+@import url(c:\Users\Horacio\Desktop\folio-frontend\node_modules\@fontsource\inter\variable.css);
+@import url(c:\Users\Horacio\Desktop\folio-frontend\node_modules\animate.css\animate.compat.css);
+@import url(c:\Users\Horacio\Desktop\folio-frontend\src\assets\scss\vendor\bitIcon\style.css);
+@import url(c:\Users\Horacio\Desktop\folio-frontend\node_modules\simplebar\dist\simplebar.css);
+@import url(c:\Users\Horacio\Desktop\folio-frontend\node_modules\tiny-slider\dist\tiny-slider.css);
+@import url(c:\Users\Horacio\Desktop\folio-frontend\node_modules\@fontsource\raleway\variable.css);
 @font-face {
   font-family: "around-icons";
   src: url("./aroundTemplate/fonts/around-icons.ttf") format("truetype");
@@ -20241,115 +20241,6 @@ input[type='search']::-webkit-search-results-decoration {
 }
 
 .entry-nav .entry-nav-thumb > img {
-  display: block;
-  width: 100%;
-}
-
-.jarallax {
-  position: relative;
-  z-index: 0;
-}
-
-.jarallax .jarallax-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background-position: center !important;
-  background-size: cover !important;
-}
-
-@media (max-width: 499.98px) {
-  [data-disable-parallax-down='sm'] {
-    -webkit-transform: none !important;
-            transform: none !important;
-  }
-}
-
-@media (max-width: 767.98px) {
-  [data-disable-parallax-down='md'] {
-    -webkit-transform: none !important;
-            transform: none !important;
-  }
-}
-
-@media (max-width: 991.98px) {
-  [data-disable-parallax-down='lg'] {
-    -webkit-transform: none !important;
-            transform: none !important;
-  }
-}
-
-@media (max-width: 1279.98px) {
-  [data-disable-parallax-down='xl'] {
-    -webkit-transform: none !important;
-            transform: none !important;
-  }
-}
-
-@media (max-width: 1399.98px) {
-  [data-disable-parallax-down='xxl'] {
-    -webkit-transform: none !important;
-            transform: none !important;
-  }
-}
-
-@media (min-width: 500px) {
-  [data-disable-parallax-up='sm'] {
-    -webkit-transform: none !important;
-            transform: none !important;
-  }
-}
-
-@media (min-width: 768px) {
-  [data-disable-parallax-up='md'] {
-    -webkit-transform: none !important;
-            transform: none !important;
-  }
-}
-
-@media (min-width: 992px) {
-  [data-disable-parallax-up='lg'] {
-    -webkit-transform: none !important;
-            transform: none !important;
-  }
-}
-
-@media (min-width: 1280px) {
-  [data-disable-parallax-up='xl'] {
-    -webkit-transform: none !important;
-            transform: none !important;
-  }
-}
-
-@media (min-width: 1400px) {
-  [data-disable-parallax-up='xxl'] {
-    -webkit-transform: none !important;
-            transform: none !important;
-  }
-}
-
-_:-ms-lang(x), .jarallax .jarallax-img {
-  margin: 0 !important;
-  position: absolute !important;
-  transform: none !important;
-}
-
-.parallax {
-  position: relative;
-}
-
-.parallax-layer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.parallax-layer > img {
   display: block;
   width: 100%;
 }
