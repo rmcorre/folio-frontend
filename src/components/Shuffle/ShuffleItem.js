@@ -16,7 +16,7 @@ const ShufflePhotoItem = ({
       data-groups={`["${dataGroup}"]`}
     >
       <a className="card card-hover h-100 border-0 shadow" href={href}>
-        <img className="card-img-top" src={src} alt="Article image" />
+        <img className="card-img-top" src={src} alt={name} />
         <div className="card-body text-center">
           <h3 className="h5 mb-1">{name}</h3>
           <span className="fs-sm text-muted">{category}</span>
