@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import ShuffleItem from './ShuffleItem';
+import Shuffle from 'shufflejs';
 
 import folioFrontend from '../../img/portfolio/folioFrontend.svg';
 import folioBackend from '../../img/portfolio/folioBackend.svg';
@@ -62,6 +63,8 @@ const projectsArray = [
 
 const ShuffleGrid = () => {
   const [projects, setProjects] = useState([]);
+  const element = useRef();
+  const sizer = useRef();
 
   // When the ShuffleGrid component first mounts
   // add the ShufflePhotoItem markup without photos being
@@ -73,13 +76,18 @@ const ShuffleGrid = () => {
   // initialized. Now it is safe to show the photos with setPhotos.
 
   useEffect(() => {
+    let shuffle = null;
     setProjects(projectsArray);
+    shuffle = new Shuffle(element.current, {
+      itemSelector: 'masonry-grid',
+      sizer: sizer.current,
+    });
   }, []);
 
   return (
-    <div className="masonry-grid" data-columns="3">
+    <div ref={element} className="masonry-grid" data-columns="3">
       {projects.map((project) => (
-        <ShuffleItem {...project} />
+        <ShuffleItem useRef={sizer} {...project} />
       ))}
     </div>
   );
