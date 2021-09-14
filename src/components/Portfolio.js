@@ -1,17 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import loadThemeMinJs from '../helpers/loadThemeMinJs';
-
-import ShuffleFilter from './Shuffle/ShuffleFilter';
+import React from 'react';
 import ShuffleGrid from './Shuffle/ShuffleGrid';
 
 const Portfolio = () => {
-  const [isThemeLoaded, setIsThemeLoaded] = useState(false);
-
-  useEffect(() => {
-    loadThemeMinJs();
-    setIsThemeLoaded(true);
-  }, [isThemeLoaded]);
-
   return (
     <section id="portfolio" className="overflow-hidden">
       <div className="container py-lg-7 py-md-6 py-5 my-2 my-md-0">
@@ -20,7 +10,6 @@ const Portfolio = () => {
           Most recent projects I am working on or have completed
         </p>
         <div className="masonry-filterable">
-          <ShuffleFilter />
           <ShuffleGrid />
         </div>
         {/* <div className="pt-3 text-center">
