@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import loadThemeMinJs from '../helpers/loadThemeMinJs';
 
 import img1 from '../img/testimonials/01.jpg';
 import img2 from '../img/testimonials/02.jpg';
 import illustration from '../img/testimonials/illustration.svg';
 
 const Testimonials = () => {
+  const [isThemeLoaded, setIsThemeLoaded] = useState(false);
+
+  useEffect(() => {
+    loadThemeMinJs();
+    setIsThemeLoaded(true);
+  }, [isThemeLoaded]);
+
   return (
     <section className="bg-faded-primary position-relative py-md-7 py-5">
       <div className="container">
