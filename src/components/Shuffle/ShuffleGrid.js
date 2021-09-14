@@ -62,22 +62,11 @@ const projectsArray = [
   },
 ];
 
-const ShuffleGrid = (props) => {
-  const [projects, setProjects] = useState(projectsArray);
+const ShuffleGrid = () => {
+  const [projects] = useState(projectsArray);
   const [shuffle, setShuffle] = useState(null);
   const grid = useRef();
-  const gridItem = useRef();
-  console.log(grid.current);
-  console.log(shuffle);
 
-  // When the ShuffleGrid component first mounts
-  // add the ShufflePhotoItem markup without photos being
-  // set by useState because a Shuffle instance hasn't been initialized
-  // yet in the PortfolioAround component and the grid appears broken.
-
-  // The useEffect hook is called once after the component mounts
-  // and the Shuffle instance in PortfolioAround has been
-  // initialized. Now it is safe to show the photos with setPhotos.
   useEffect(() => {
     setShuffle(
       new Shuffle(grid.current, {
