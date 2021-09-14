@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 
 const ShuffleFilter = (props) => {
-  const [buttons, setButtons] = useState([
+  const [buttons] = useState([
     { key: '1', name: 'All', dataGroup: 'all' },
     { key: '2', name: 'Front End', dataGroup: 'frontEnd' },
     { key: '3', name: 'Back End', dataGroup: 'backEnd' },
     { key: '4', name: 'React', dataGroup: 'react' },
   ]);
-
-  console.log(props.shuffle);
 
   const [active, setActive] = useState('1');
 
