@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
-import ShuffleItem from './ShuffleItem';
 import Shuffle from 'shufflejs';
+import ShuffleFilter from './ShuffleFilter';
+import ShuffleItem from './ShuffleItem';
 
 import folioFrontend from '../../img/portfolio/folioFrontend.svg';
 import folioBackend from '../../img/portfolio/folioBackend.svg';
@@ -30,7 +31,7 @@ const projectsArray = [
     key: 3,
     username: '@react',
     name: 'React Course Projects',
-    category: 'Front End',
+    category: 'React',
     src: react,
     href: 'https://github.com/rmcorre/react-the-complete-guide-projects',
     dataGroup: 'react',
@@ -62,34 +63,28 @@ const projectsArray = [
 ];
 
 const ShuffleGrid = () => {
-  const [projects, setProjects] = useState([]);
-  const element = useRef();
-  const sizer = useRef();
-
-  // When the ShuffleGrid component first mounts
-  // add the ShufflePhotoItem markup without photos being
-  // set by useState because a Shuffle instance hasn't been initialized
-  // yet in the PortfolioAround component and the grid appears broken.
-
-  // The useEffect hook is called once after the component mounts
-  // and the Shuffle instance in PortfolioAround has been
-  // initialized. Now it is safe to show the photos with setPhotos.
+  const [projects] = useState(projectsArray);
+  const [shuffle, setShuffle] = useState(null);
+  const grid = useRef();
 
   useEffect(() => {
-    let shuffle = null;
-    setProjects(projectsArray);
-    shuffle = new Shuffle(element.current, {
-      itemSelector: 'masonry-grid',
-      sizer: sizer.current,
-    });
+    setShuffle(
+      new Shuffle(grid.current, {
+        itemSelector: '.masonry-grid-item',
+        sizer: '.masonry-grid-item',
+      })
+    );
   }, []);
 
+  const projectList = projects.map((project) => <ShuffleItem {...project} />);
+
   return (
-    <div ref={element} className="masonry-grid" data-columns="3">
-      {projects.map((project) => (
-        <ShuffleItem useRef={sizer} {...project} />
-      ))}
-    </div>
+    <>
+      <ShuffleFilter shuffle={shuffle} />
+      <div ref={grid} className="masonry-grid" data-columns="3">
+        {projectList}
+      </div>
+    </>
   );
 };
 

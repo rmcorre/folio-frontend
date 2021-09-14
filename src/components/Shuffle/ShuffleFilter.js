@@ -1,29 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const ShuffleFilter = () => {
+const ShuffleFilter = (props) => {
+  const [buttons] = useState([
+    { key: '1', name: 'All', dataGroup: 'all' },
+    { key: '2', name: 'Front End', dataGroup: 'frontEnd' },
+    { key: '3', name: 'Back End', dataGroup: 'backEnd' },
+    { key: '4', name: 'React', dataGroup: 'react' },
+  ]);
+
+  const [active, setActive] = useState('1');
+
+  const filterButtons = buttons.map((button) => {
+    return (
+      <li key={button.key} className="nav-item">
+        <a
+          data-key={button.key}
+          className={active === button.key ? 'nav-link active' : 'nav-link'}
+          href="/"
+          data-group={button.dataGroup}
+          onClick={(event) => {
+            event.preventDefault();
+            setActive(event.target.getAttribute('data-key'));
+            props.shuffle.filter(event.target.getAttribute('data-group'));
+          }}
+        >
+          {button.name}
+        </a>
+      </li>
+    );
+  });
+
   return (
     <nav className="pb-3 mb-4" data-simplebar data-simplebar-auto-hide="false">
       <ul className="masonry-filters nav nav-tabs justify-content-sm-center flex-nowrap text-nowrap mb-0">
-        <li className="nav-item">
-          <a className="nav-link active" href="#" data-group="all">
-            All
-          </a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#" data-group="frontEnd">
-            Front End
-          </a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#" data-group="backEnd">
-            Back End
-          </a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#" data-group="react">
-            React
-          </a>
-        </li>
+        {filterButtons}
       </ul>
     </nav>
   );
