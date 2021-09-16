@@ -182,11 +182,11 @@ $zindex-offcanvas: 1080;
 // Font, line-height, and color for body text, headings, and more.
 
 // $path-to-fonts: 'https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700&display=swap';
-$icons-font-family: 'around-icons';
-$icons-font-path: './aroundTemplate/fonts';
+// $icons-font-family: 'around-icons';
+// $icons-font-path: './aroundTemplate/fonts';
 
 // Import theme icon font set
-@import './aroundTemplate/components/icons';
+// @import './aroundTemplate/components/icons';
 
 $font-family-sans-serif: 'InterVariable', sans-serif;
 $headings-color: $gray-800;
@@ -271,7 +271,7 @@ $blockquote-footer-font-size: $font-size-base;
 $blockquote-footer-font-weight: $font-weight-medium;
 $blockquote-footer-color: $headings-color;
 
-$blockquote-mark: $ai-quotes;
+// $blockquote-mark: $ai-quotes;
 $blockquote-mark-color: rgba($primary, 0.5);
 $blockquote-mark-font-size: 4rem;
 
@@ -727,7 +727,7 @@ $breadcrumb-margin-bottom: 0;
 $breadcrumb-bg: transparent;
 $breadcrumb-divider-color: $gray-500;
 $breadcrumb-item-font-size: $font-size-base * 0.8125;
-$breadcrumb-divider: $ai-chevron-right;
+// $breadcrumb-divider: $ai-chevron-right;
 $breadcrumb-divider-font-size: 1.2em;
 $breadcrumb-active-color: $gray-500;
 
@@ -1239,12 +1239,12 @@ $utilities: map-merge(
 @import './aroundTemplate/components/code';
 @import './aroundTemplate/components/comments';
 @import './aroundTemplate/components/custom-scrollbar';
-@import './aroundTemplate/components/dropdown';
-@import './aroundTemplate/components/forms';
+// @import './aroundTemplate/components/dropdown';
+// @import './aroundTemplate/components/forms';
 @import './aroundTemplate/components/frames';
-@import './aroundTemplate/components/gallery';
-@import './aroundTemplate/components/hotspots';
-@import './aroundTemplate/components/icons';
+// @import './aroundTemplate/components/gallery';
+// @import './aroundTemplate/components/hotspots';
+// @import './aroundTemplate/components/icons';
 @import './aroundTemplate/components/image-swap';
 @import './aroundTemplate/components/input-group';
 @import './aroundTemplate/components/list-group';
@@ -1260,7 +1260,7 @@ $utilities: map-merge(
 @import './aroundTemplate/components/sidebar';
 @import './aroundTemplate/components/social-buttons';
 @import './aroundTemplate/components/type';
-@import './aroundTemplate/components/widgets';
+// @import './aroundTemplate/components/widgets';
 
 // Vendor imports
 @import '../../../node_modules/animate.css/animate.compat';
