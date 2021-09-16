@@ -1,35 +1,45 @@
-import React, { useContext, useState, useEffect, createContext } from 'react';
-import axios from 'axios';
+import React, {
+  useContext,
+  useState,
+  useEffect,
+  createContext,
+  useCallback,
+} from 'react';
 
 const ProfileContext = createContext();
 
 export function ProfileContextProvider({ children }) {
   const [profile, setProfile] = useState(null);
 
-  useEffect(() => {
+  const fetchData = useCallback(async () => {
     // http://localhost:8080 (when server is on this device)
-    // http://192.168.1.73:8080 (when server is on HP Laptop and connected to   // home wifi)
-    // https://192.168.1.73:8443 (when server is on HP Laptop, using HTTPS, and // connected to home wifi)
+    // http://192.168.1.73:8080 (when server is on HP Laptop)
+    // https://192.168.1.73:8443 (when server is on HP Laptop and using HTTPS)
 
-    // 'NET::ERR_CERT_AUTHORITY_INVALID' error.
-    // Had a problem using HTTPS even after double checking
-    // the backend code until I enteterd
-    // 'https://192.168.1.73:8443/profiles' in the browser and bypassed the
-    // warning by clicking on the 'Advanced' link.
+    try {
+      const response = await fetch('https://192.168.1.73:8443/profiles');
 
-    async function fetchData() {
-      const { data } = await axios.get('https://192.168.1.73:8443/profiles');
+      if (!response.ok) {
+        throw new Error('Error fetching data!');
+      }
+
+      const data = await response.json();
+
       setProfile(data.find((profile) => profile.id === 1));
+    } catch (error) {
+      console.log(error);
     }
-
-    fetchData();
   }, []);
 
+  useEffect(() => {
+    fetchData();
+  }, [fetchData]);
+
   if (profile === null) {
-    console.log('Error: Context is null');
     return null;
   }
 
+  //Might be better to do this on the server with a dto
   const firstName = profile.identity.name.first;
   const lastName = profile.identity.name.last;
   const fullName = firstName + ' ' + lastName;
@@ -37,6 +47,7 @@ export function ProfileContextProvider({ children }) {
   const subCategory = profile.identity.role.subCategory.subCategoryName;
   const category = profile.identity.role.category.categoryName;
   const role = subCategory + ' ' + category;
+
   const email = profile.identity.contact.email.email;
   const countryCode = profile.identity.contact.phone.countryCode;
   const number = profile.identity.contact.phone.number;
@@ -45,10 +56,12 @@ export function ProfileContextProvider({ children }) {
   const region = profile.identity.contact.address.region;
   const location = island + ', ' + region;
   const summary = profile.identity.summary.summary;
+
   const concepts = profile.industry.concepts;
   const techs = profile.industry.techs;
   const frameworks = profile.industry.frameworks;
   const tools = profile.industry.tools;
+
   const educations = profile.educations;
   const experiences = profile.experiences;
 
@@ -79,7 +92,7 @@ export function ProfileContextProvider({ children }) {
   );
 }
 
-// Create a hook to use the ProfileContext
+// Creating a custom hook
 export function useProfileAPI() {
   const context = useContext(ProfileContext);
   if (context === undefined) {
