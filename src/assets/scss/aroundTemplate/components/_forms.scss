@@ -144,11 +144,11 @@ input[type='search']::-webkit-search-results-decoration {
     transition: color 0.2s ease-in-out;
     color: $input-placeholder-color;
     font: {
-      family: $icons-font-family;
+      // family: $icons-font-family;
       style: normal;
     }
     &::before {
-      content: $ai-eye;
+      // content: $ai-eye;
     }
     &:hover {
       color: $input-color;
@@ -164,7 +164,7 @@ input[type='search']::-webkit-search-results-decoration {
     opacity: 0;
 
     &:checked ~ .password-toggle-indicator::before {
-      content: $ai-eye-off;
+      // content: $ai-eye-off;
     }
   }
 }

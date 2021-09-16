@@ -2,8 +2,6 @@ import React from 'react';
 import WOW from 'wow.js';
 
 import illustration from '../img/services/team_work3.png';
-import icon1 from '../img/services/01.svg';
-import icon3 from '../img/services/03.svg';
 
 const Services = () => {
   const wow = new WOW();
@@ -29,7 +27,6 @@ const Services = () => {
                 className="wow fadeInUp d-md-flex align-items-start d-block mb-4 pb-2"
                 data-wow-delay=".5s"
               >
-                <img className="me-md-4 mb-md-0 mb-4" src={icon1} alt="Icon" />
                 <div className="ps-md-2">
                   <p className="mb-2 fs-sm">
                     Visually appealing front-end development, including
@@ -41,7 +38,6 @@ const Services = () => {
                 className="wow fadeInUp d-md-flex align-items-start d-block mb-4 pb-2"
                 data-wow-delay=".7s"
               >
-                <img className="me-md-4 mb-md-0 mb-4" src={icon3} alt="Icon" />
                 <div className="ps-md-2">
                   <p className="mb-2 fs-sm">
                     Functional databases, applications and servers. Develop and
@@ -53,7 +49,6 @@ const Services = () => {
                 className="wow fadeInUp d-md-flex align-items-start d-block mb-4 pb-2"
                 data-wow-delay=".9s"
               >
-                <img className="me-md-4 mb-md-0 mb-4" src={icon3} alt="Icon" />
                 <div className="ps-md-2">
                   <p className="mb-0 fs-sm">
                     Ensure non-functional requirements such as security,
@@ -67,7 +62,6 @@ const Services = () => {
                 className="wow fadeInUp d-md-flex align-items-start d-block"
                 data-wow-delay="1.1s"
               >
-                <img className="me-md-4 mb-md-0 mb-4" src={icon3} alt="Icon" />
                 <div className="ps-md-2">
                   <p className="mb-0 fs-sm">
                     Keep job knowledge up-to-date by learning new development
