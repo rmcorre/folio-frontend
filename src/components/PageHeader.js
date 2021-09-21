@@ -8,7 +8,7 @@ import AuthNav from './auth/AuthNav';
 // eslint-disable-next-line no-unused-vars
 import Modal from 'bootstrap';
 
-const DocumentHeader = (props) => {
+const PageHeader = (props) => {
   const [navbarStuck, setNavbarStuck] = useState('');
   const [authNav, setAuthNav] = useState('');
   const header = useRef(null);
@@ -108,4 +108,4 @@ const DocumentHeader = (props) => {
   );
 };
 
-export default DocumentHeader;
+export default PageHeader;
