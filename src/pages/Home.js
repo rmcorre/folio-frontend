@@ -20,9 +20,9 @@ function App() {
       <RemoveFromDom delay="300">
         <PageLoadingSpinner />
       </RemoveFromDom>
+      <DocumentHeader />
       <main className="page-wrapper">
         <ContactModal />
-        <DocumentHeader />
         <Hero />
         <Services />
         <Skills />
