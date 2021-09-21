@@ -4,7 +4,7 @@ import { ProfileContextProvider } from './store/profileContext';
 import ProtectedRoute from './components/auth/protected-route';
 
 import Home from './pages/Home';
-import ResumeMobile from './pages/Resume';
+import CV from './pages/CV';
 import Admin from './pages/Admin';
 
 function App() {
@@ -14,8 +14,8 @@ function App() {
         <Route path="/" exact>
           <Home />
         </Route>
-        <Route path="/resume">
-          <ResumeMobile />
+        <Route path="/cv">
+          <CV />
         </Route>
         <ProtectedRoute path="/Admin" component={Admin} />
       </Switch>
