@@ -1,13 +1,12 @@
 import { useState, useEffect, useRef } from 'react';
 import DocumentNav from './DocumentNav';
 import NavbarToggler from './NavbarToggler';
+import NavbarBranding from './NavbarBranding';
 import AuthNav from './auth/AuthNav';
 
 // Need this for modal functionality
 // eslint-disable-next-line no-unused-vars
 import Modal from 'bootstrap';
-
-import logo from '../img/logo/hcLogoMaster.svg';
 
 const DocumentHeader = (props) => {
   const [navbarStuck, setNavbarStuck] = useState('');
@@ -43,18 +42,7 @@ const DocumentHeader = (props) => {
       <DocumentNav>
         <div className="container px-0 px-xl-3">
           <NavbarToggler target="#primaryMenu" toggle="offcanvas" />
-          <a
-            className="navbar-brand flex-shrink-0 order-lg-1 mx-auto ms-lg-0 pe-lg-2 me-lg-4"
-            href="/"
-          >
-            <img
-              className="d-none d-lg-block"
-              src={logo}
-              alt="Around"
-              width="50"
-            />
-            <img className="d-lg-none" src={logo} alt="Around" width="36" />
-          </a>
+          <NavbarBranding />
           <div className="d-flex align-items-center order-lg-3 ms-lg-auto">
             {authNav}
             <a
