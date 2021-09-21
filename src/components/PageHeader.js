@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import DocumentNav from './DocumentNav';
+import PageNav from './PageNav';
 import NavbarToggler from './NavbarToggler';
 import NavbarBranding from './NavbarBranding';
 import AuthNav from './auth/AuthNav';
@@ -39,7 +39,7 @@ const PageHeader = (props) => {
 
   return (
     <header ref={header} className={`header ${navbarStuck}`}>
-      <DocumentNav>
+      <PageNav>
         <div className="container px-0 px-xl-3">
           <NavbarToggler target="#primaryMenu" toggle="offcanvas" />
           <NavbarBranding />
@@ -103,7 +103,7 @@ const PageHeader = (props) => {
             </div>
           </div>
         </div>
-      </DocumentNav>
+      </PageNav>
     </header>
   );
 };
