@@ -7,7 +7,7 @@ import reportWebVitals from './reportWebVitals';
 
 import 'simplebar';
 
-import './assets/scss/customBootstrap.css';
+import './assets/css/customBootstrap.css';
 
 ReactDOM.render(
   <React.StrictMode>
