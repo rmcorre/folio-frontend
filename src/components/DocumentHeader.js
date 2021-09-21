@@ -1,4 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
+import DocumentNav from './DocumentNav';
+import NavbarToggler from './NavbarToggler';
 import AuthNav from './auth/AuthNav';
 
 // Need this for modal functionality
@@ -38,16 +40,9 @@ const DocumentHeader = (props) => {
 
   return (
     <header ref={header} className={`header ${navbarStuck}`}>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light navbar-sticky">
+      <DocumentNav>
         <div className="container px-0 px-xl-3">
-          <button
-            className="navbar-toggler ms-n2 me-2"
-            type="button"
-            data-bs-target="#primaryMenu"
-            data-bs-toggle="offcanvas"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
+          <NavbarToggler target="#primaryMenu" toggle="offcanvas" />
           <a
             className="navbar-brand flex-shrink-0 order-lg-1 mx-auto ms-lg-0 pe-lg-2 me-lg-4"
             href="/"
@@ -120,7 +115,7 @@ const DocumentHeader = (props) => {
             </div>
           </div>
         </div>
-      </nav>
+      </DocumentNav>
     </header>
   );
 };
