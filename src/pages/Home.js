@@ -4,7 +4,7 @@ import RemoveFromDom from '../components/RemoveFromDom';
 import PageLoadingSpinner from '../components/PageLoadingSpinner';
 
 import ContactModal from '../components/ContactModal';
-import Header from '../components/Header';
+import DocumentHeader from '../components/DocumentHeader';
 import Hero from '../components/Hero';
 import Services from '../components/Services';
 import Skills from '../components/Skills';
@@ -22,7 +22,7 @@ function App() {
       </RemoveFromDom>
       <main className="page-wrapper">
         <ContactModal />
-        <Header />
+        <DocumentHeader />
         <Hero />
         <Services />
         <Skills />
