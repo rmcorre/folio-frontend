@@ -41,32 +41,12 @@ const Header = (props) => {
       ref={header}
       className={`header navbar navbar-expand-lg navbar-light bg-light navbar-sticky ${navbarStuck}`}
     >
-      <div className="navbar-search bg-light">
-        <div className="container d-flex flex-nowrap align-items-center">
-          <i className="ai-search fs-xl"></i>
-          <input
-            className="form-control form-control-xl navbar-search-field"
-            type="text"
-            placeholder="Search site"
-          />
-          <div className="d-flex align-items-center">
-            <span className="text-muted fs-xs mt-1 d-none d-sm-inline">
-              Close
-            </span>
-            <button
-              className="btn-close p-2"
-              type="button"
-              data-bs-toggle="search"
-            ></button>
-          </div>
-        </div>
-      </div>
       <div className="container px-0 px-xl-3">
         <button
           className="navbar-toggler ms-n2 me-2"
           type="button"
-          data-bs-toggle="offcanvas"
           data-bs-target="#primaryMenu"
+          data-bs-toggle="offcanvas"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -100,8 +80,8 @@ const Header = (props) => {
           </a>
         </div>
         <div
-          className="offcanvas offcanvas-collapse order-lg-2"
           id="primaryMenu"
+          className="offcanvas offcanvas-collapse order-lg-2"
         >
           <div className="offcanvas-header navbar-shadow">
             <h5 className="mt-1 mb-0">Menu</h5>
@@ -120,8 +100,8 @@ const Header = (props) => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/resume">
-                  Resume
+                <a className="nav-link" href="/cv">
+                  CV
                 </a>
               </li>
               <li className="nav-item">
