@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import PageNav from './PageNav';
+import PageNav from './Navbar';
 import NavbarToggler from './NavbarToggler';
 import NavbarBranding from './NavbarBranding';
 import AuthNav from './auth/AuthNav';
