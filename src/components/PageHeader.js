@@ -1,8 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import PageNav from './Navbar';
-import NavbarToggler from './NavbarToggler';
-import NavbarBranding from './NavbarBranding';
-import AuthNav from './auth/AuthNav';
+import Navbar from './Navbar';
 
 // Need this for modal functionality
 // eslint-disable-next-line no-unused-vars
@@ -10,7 +7,6 @@ import Modal from 'bootstrap';
 
 const PageHeader = (props) => {
   const [navbarStuck, setNavbarStuck] = useState('');
-  const [authNav, setAuthNav] = useState('');
   const header = useRef(null);
 
   const handleScroll = (e) => {
@@ -31,35 +27,10 @@ const PageHeader = (props) => {
     };
   }, [navbarStuck]);
 
-  useEffect(() => {
-    if (props.admin) {
-      setAuthNav(<AuthNav />);
-    }
-  }, [props.admin]);
-
   return (
     <header ref={header} className={`header ${navbarStuck}`}>
-      <PageNav>
+      <Navbar>
         <div className="container px-0 px-xl-3">
-          <NavbarToggler target="#primaryMenu" toggle="offcanvas" />
-          <NavbarBranding />
-          <div className="d-flex align-items-center order-lg-3 ms-lg-auto">
-            {authNav}
-            <a
-              className="btn btn-primary d-lg-inline-block d-none"
-              href="#modal-contact"
-              data-bs-toggle="modal"
-            >
-              Hire me
-            </a>
-            <a
-              className="btn btn-sm btn-primary d-lg-none d-inline-block"
-              href="#modal-contact"
-              data-bs-toggle="modal"
-            >
-              Hire me
-            </a>
-          </div>
           <div
             id="primaryMenu"
             className="offcanvas offcanvas-collapse order-lg-2"
@@ -103,7 +74,7 @@ const PageHeader = (props) => {
             </div>
           </div>
         </div>
-      </PageNav>
+      </Navbar>
     </header>
   );
 };
