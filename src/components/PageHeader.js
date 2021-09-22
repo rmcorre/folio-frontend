@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import Navbar from './Navbar';
+import Navbar from './Navbar/Navbar';
 
 // Need this for modal functionality
 // eslint-disable-next-line no-unused-vars
