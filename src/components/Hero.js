@@ -1,13 +1,11 @@
-import React from 'react';
 import WOW from 'wow.js';
 
-import '../../node_modules/animate.css/animate.css';
 import heroImage from '../img/hero/developerResized.png';
 
-const HeroAround = () => {
-  const wow = new WOW();
-  wow.init();
+const wow = new WOW();
+wow.init();
 
+const Hero = () => {
   return (
     <section className="container mb-3 my-md-0 py-5 py-md-6">
       <div className="row align-items-center">
@@ -45,4 +43,4 @@ const HeroAround = () => {
   );
 };
 
-export default HeroAround;
+export default Hero;
