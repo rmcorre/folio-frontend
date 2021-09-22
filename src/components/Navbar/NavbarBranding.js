@@ -1,4 +1,4 @@
-import logo from '../img/logo/hcLogoMaster.svg';
+import logo from '../../img/logo/hcLogoMaster.svg';
 
 const NavbarBranding = () => {
   return (

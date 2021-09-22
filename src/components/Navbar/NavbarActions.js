@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import AuthNav from './auth/AuthNav';
+import AuthNav from '../auth/AuthNav';
 
 const NavbarActions = (props) => {
   const [authNav, setAuthNav] = useState('');
