@@ -1,12 +1,10 @@
-import React from 'react';
 import WOW from 'wow.js';
-
 import illustration from '../img/skills/skills.svg';
 
-const Skills = () => {
-  const wow = new WOW();
-  wow.init();
+const wow = new WOW();
+wow.init();
 
+const Skills = () => {
   return (
     <section className="position-relative py-md-7 py-5">
       <div className="container my-2 my-md-0">
