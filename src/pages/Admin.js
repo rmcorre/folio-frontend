@@ -1,9 +1,6 @@
-import React from 'react';
-
 import RemoveFromDom from '../components/RemoveFromDom';
 import PageLoadingSpinner from '../components/PageLoadingSpinner';
 
-import ContactModal from '../components/ContactModal';
 import PageHeader from '../components/PageHeader';
 import Hero from '../components/Hero';
 import Services from '../components/Services';
@@ -12,6 +9,7 @@ import Portfolio from '../components/Portfolio';
 import Testimonials from '../components/Testimonials';
 import Socials from '../components/Socials';
 import Footer from '../components/Footer';
+import ContactModal from '../components/ContactModal';
 import BackToTop from '../components/BackToTop';
 
 function App() {
@@ -22,7 +20,6 @@ function App() {
       </RemoveFromDom>
       <PageHeader admin="true" />
       <main className="page-wrapper">
-        <ContactModal />
         <Hero />
         <Services />
         <Skills />
@@ -31,6 +28,7 @@ function App() {
         <Socials />
       </main>
       <Footer />
+      <ContactModal />
       <BackToTop />
     </>
   );
