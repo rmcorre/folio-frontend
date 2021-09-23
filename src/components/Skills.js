@@ -19,7 +19,6 @@ const Skills = () => {
                 data-wow-delay=".5s"
               >
                 <div>
-                  {/* <h3 className="h6 mb-2">Front End</h3> */}
                   <i
                     className="bitIcon-js-sq"
                     style={{ color: '#bfbfbf', fontSize: 60 }}
@@ -40,34 +39,6 @@ const Skills = () => {
                     className="bitIcon-java-sq"
                     style={{ color: '#bfbfbf', fontSize: 60 }}
                   ></i>
-                  <div className="d-flex flex-wrap text-primary"></div>
-                </div>
-              </div>
-              <div
-                className="wow fadeInUp d-md-flex align-items-start d-block mb-4 pb-2"
-                data-wow-delay="1s"
-              >
-                <div className="ps-md-2">
-                  {/* <h3 className="h6 mb-2">Back End</h3> */}
-                  <div className="d-flex flex-wrap text-primary"></div>
-                </div>
-              </div>
-              <div
-                className="wow fadeInUp d-md-flex align-items-start d-block mb-4 pb-2"
-                data-wow-delay="1s"
-              >
-                <div className="ps-md-2">
-                  {/* <h3 className="h6 mb-2">Best Practices</h3> */}
-                  <p className="mb-0 fs-sm"></p>
-                </div>
-              </div>
-              <div
-                className="wow fadeInUp d-md-flex align-items-start d-block"
-                data-wow-delay="1s"
-              >
-                <div className="ps-md-2">
-                  {/* <h3 className="h6 mb-2">Ambition and Curiosity</h3> */}
-                  <p className="mb-0 fs-sm"></p>
                 </div>
               </div>
             </div>
