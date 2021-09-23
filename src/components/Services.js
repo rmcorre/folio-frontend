@@ -1,12 +1,11 @@
 import React from 'react';
 import WOW from 'wow.js';
-
 import illustration from '../img/services/team_work3.png';
 
-const Services = () => {
-  const wow = new WOW();
-  wow.init();
+const wow = new WOW();
+wow.init();
 
+const Services = () => {
   return (
     <section className="bg-faded-primary position-relative py-md-7 py-5">
       <div className="container my-2 my-md-0">
