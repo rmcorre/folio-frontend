@@ -1,4 +1,3 @@
-import React from 'react';
 import WOW from 'wow.js';
 import illustration from '../img/services/team_work3.png';
 
