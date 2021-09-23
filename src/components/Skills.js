@@ -11,7 +11,7 @@ const Skills = () => {
         <div className="row align-items-center">
           <div className="col-lg-6 offset-lg-1 col-md-7 text-md-start text-center">
             <div className="mx-md-0 mx-auto" style={{ maxWidth: '500px' }}>
-              <h2 className="wow fadeInUp mb-md-5 mb-4" data-wow-delay=".3s">
+              <h2 className="wow fadeInUp mb-md-3 mb-3" data-wow-delay=".3s">
                 Skills I've Aquired
               </h2>
               <div
