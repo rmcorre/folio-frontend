@@ -47,7 +47,7 @@ const Skills = () => {
             <img
               className="d-block mx-md-0 mx-auto"
               src={illustration}
-              alt="Illustration"
+              alt="Illustration of developer."
             />
           </div>
         </div>
