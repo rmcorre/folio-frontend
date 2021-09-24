@@ -12,7 +12,7 @@ const Testimonials = () => {
   useEffect(() => {
     setSlider(
       tns({
-        container: '.tns-carousel-wrapper .tns-carousel-inner',
+        container: '.tns-carousel-inner',
         controlsText: [
           '<i class="bi bi-arrow-left"></i>',
           '<i class="bi bi-arrow-right"></i>',
@@ -37,10 +37,8 @@ const Testimonials = () => {
       <div className="container">
         <div className="row">
           <div className="col-lg-6 col-md-7 order-md-1 order-2">
-            {/* Carousel */}
             <div className="tns-carousel-wrapper">
               <div className="tns-carousel-inner">
-                {/* Carousel item */}
                 <blockquote className="blockquote mt-3 mb-0">
                   <p>
                     Sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -64,7 +62,6 @@ const Testimonials = () => {
                     </div>
                   </footer>
                 </blockquote>
-                {/* Carousel item */}
                 <blockquote className="blockquote mt-3 mb-0">
                   <p>
                     Consectetur adipisicing elit. Minus facilis asperiores
