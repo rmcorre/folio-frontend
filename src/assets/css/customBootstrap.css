@@ -1,4 +1,5 @@
 @import url(c:\Users\Horacio\Desktop\folio-frontend\node_modules\@fontsource\inter\variable.css);
+@import url(c:\Users\Horacio\Desktop\folio-frontend\node_modules\bootstrap-icons\font\bootstrap-icons.css);
 @import url(c:\Users\Horacio\Desktop\folio-frontend\node_modules\animate.css\animate.compat.css);
 @import url(c:\Users\Horacio\Desktop\folio-frontend\src\assets\scss\vendor\bitIcon\style.css);
 @import url(c:\Users\Horacio\Desktop\folio-frontend\node_modules\simplebar\dist\simplebar.css);
@@ -14160,7 +14161,7 @@ a.card-floating-icon:hover {
   border-radius: 0.75rem;
   background-color: #fff;
   color: #737491;
-  font-size: 1.25rem;
+  font-size: 0.875rem;
   text-align: center;
 }
 

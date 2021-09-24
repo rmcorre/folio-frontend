@@ -6,7 +6,6 @@ import Auth0ProviderWithHistory from './components/auth/auth0-provider-with-hist
 import reportWebVitals from './reportWebVitals';
 
 import 'simplebar';
-
 import './assets/css/customBootstrap.css';
 
 ReactDOM.render(
