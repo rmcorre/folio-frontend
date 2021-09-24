@@ -1,17 +1,36 @@
-import React, { useEffect, useState } from 'react';
-import loadThemeMinJs from '../helpers/loadThemeMinJs';
+import { useState, useEffect } from 'react';
+import { tns } from '../../node_modules/tiny-slider/src/tiny-slider';
 
 import img1 from '../img/testimonials/01.jpg';
 import img2 from '../img/testimonials/02.jpg';
 import illustration from '../img/testimonials/illustration.svg';
 
 const Testimonials = () => {
-  const [isThemeLoaded, setIsThemeLoaded] = useState(false);
+  // eslint-disable-next-line
+  const [slider, setSlider] = useState(null);
 
   useEffect(() => {
-    loadThemeMinJs();
-    setIsThemeLoaded(true);
-  }, [isThemeLoaded]);
+    setSlider(
+      tns({
+        container: '.tns-carousel-wrapper .tns-carousel-inner',
+        controlsText: [
+          '<i class="bi bi-arrow-left"></i>',
+          '<i class="bi bi-arrow-right"></i>',
+        ],
+        navPosition: 'top',
+        controlsPosition: 'top',
+        mouseDrag: !0,
+        speed: 600,
+        autoplayHoverPause: !0,
+        autoplayButtonOutput: !1,
+        gutter: 20,
+        responsive: {
+          0: { nav: true, controls: false },
+          991: { nav: false, controls: true },
+        },
+      })
+    );
+  }, []);
 
   return (
     <section className="bg-faded-primary position-relative py-md-7 py-5">
@@ -20,10 +39,7 @@ const Testimonials = () => {
           <div className="col-lg-6 col-md-7 order-md-1 order-2">
             {/* Carousel */}
             <div className="tns-carousel-wrapper">
-              <div
-                className="tns-carousel-inner"
-                data-carousel-options='{"gutter": 20, "responsive": {"0": {"nav": true, "controls": false}, "991": {"nav": false, "controls": true}}}'
-              >
+              <div className="tns-carousel-inner">
                 {/* Carousel item */}
                 <blockquote className="blockquote mt-3 mb-0">
                   <p>
