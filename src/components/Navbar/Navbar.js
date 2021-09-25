@@ -5,7 +5,7 @@ import NavbarNav from './NavbarNav';
 
 const Navbar = (props) => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light navbar-sticky">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container px-0 px-xl-3">
         <NavbarToggler target="#primaryMenu" toggle="offcanvas" />
         <NavbarBranding />

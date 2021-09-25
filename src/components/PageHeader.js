@@ -28,7 +28,7 @@ const PageHeader = (props) => {
   }, [navbarStuck]);
 
   return (
-    <header ref={header} className={`header ${navbarStuck}`}>
+    <header ref={header} className={`header navbar-sticky ${navbarStuck}`}>
       <Navbar admin={props.admin} />
     </header>
   );
