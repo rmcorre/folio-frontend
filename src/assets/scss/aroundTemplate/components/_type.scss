@@ -61,12 +61,12 @@ dd {
     left: 0;
     color: $blockquote-mark-color;
     font: {
-      // family: $icons-font-family;
+      family: $icons-font-family;
       size: $blockquote-mark-font-size;
       weight: normal;
     }
     line-height: 1;
-    // content: $blockquote-mark;
+    content: $blockquote-mark;
   }
 
   &.text-center,

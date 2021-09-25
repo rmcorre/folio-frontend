@@ -183,11 +183,11 @@ $zindex-offcanvas: 1080;
 // Font, line-height, and color for body text, headings, and more.
 
 // $path-to-fonts: 'https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700&display=swap';
-// $icons-font-family: 'around-icons';
-// $icons-font-path: './aroundTemplate/fonts';
+$icons-font-family: 'folio';
+$icons-font-path: '../fonts';
 
 // Import theme icon font set
-// @import './aroundTemplate/components/icons';
+@import './aroundTemplate/components/icons';
 
 $font-family-sans-serif: 'InterVariable', sans-serif;
 $headings-color: $gray-800;
@@ -272,7 +272,7 @@ $blockquote-footer-font-size: $font-size-base;
 $blockquote-footer-font-weight: $font-weight-medium;
 $blockquote-footer-color: $headings-color;
 
-// $blockquote-mark: $ai-quotes;
+$blockquote-mark: $fo-quotes;
 $blockquote-mark-color: rgba($primary, 0.5);
 $blockquote-mark-font-size: 4rem;
 
