@@ -5,6 +5,12 @@ import img1 from '../img/testimonials/01.jpg';
 import img2 from '../img/testimonials/02.jpg';
 import illustration from '../img/testimonials/illustration.svg';
 
+// Temporary - add to scss
+const personCirlcleStyle = {
+  fontSize: '2rem',
+  color: '#766DF4',
+};
+
 const Testimonials = () => {
   // eslint-disable-next-line
   const [slider, setSlider] = useState(null);
@@ -73,15 +79,19 @@ const Testimonials = () => {
                     Velit modi neque placeat consequatur voluptatibus odit aut
                     iste dolorum dolorem magnam.
                   </p>
-                  <footer className="d-flex align-items-center">
-                    <img
+                  <footer
+                    className="d-flex align-items-center"
+                    style={personCirlcleStyle}
+                  >
+                    <i class="bi bi-person-circle"></i>
+                    {/* <img
                       className="rounded-circle"
                       src={img2}
                       alt="Tim Brooks"
                       width="42"
-                    />
+                    /> */}
                     <div className="text-heading fs-md fw-medium ps-2 ms-1">
-                      Serenity Edwards
+                      Guest
                     </div>
                   </footer>
                 </blockquote>
