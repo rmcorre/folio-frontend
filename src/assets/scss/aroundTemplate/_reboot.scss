@@ -9,6 +9,11 @@ html * {
   @include font-smoothing;
 }
 
+// https://gomakethings.com/how-to-animate-scrolling-to-anchor-links-with-one-line-of-css/
+html {
+  scroll-behavior: smooth;
+}
+
 // Sticky footer
 html,
 body {
