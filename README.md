@@ -4,7 +4,7 @@ There is still alot of clean-up and refactoring to do as I've been focusing on i
 presentation.
 
 This was mostly an excercise to try to duplicate a design and to split that design into React components. 
-It was also useful to learn about new features that could be added to provide a better UI experience.
+It was also useful to learn about new features that could be added to improve the UX/UI.
 
 Changes made from folio-frontend-old:
 * Use only functional components and hooks
