@@ -12,7 +12,7 @@ const Testimonials = () => {
   useEffect(() => {
     setSlider(
       tns({
-        container: '.tns-carousel-inner',
+        container: '.tns-carousel-wrapper .tns-carousel-inner',
         controlsText: [
           '<i class="bi bi-arrow-left"></i>',
           '<i class="bi bi-arrow-right"></i>',
