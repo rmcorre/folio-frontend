@@ -6,9 +6,9 @@ import img2 from '../img/testimonials/02.jpg';
 import illustration from '../img/testimonials/illustration.svg';
 
 // Temporary - add to scss
-const personCirlcleStyle = {
+const testimonialSource = {
   fontSize: '2rem',
-  color: '#766DF4',
+  color: '#9e9fb4',
 };
 
 const Testimonials = () => {
@@ -56,15 +56,19 @@ const Testimonials = () => {
                     At vero eos et accusamus et iusto odio dignissimos ducimus
                     qui blanditiis voluptatum deleniti atque.
                   </p>
-                  <footer className="d-flex align-items-center">
-                    <img
+                  <footer
+                    className="d-flex align-items-center"
+                    style={testimonialSource}
+                  >
+                    <i class="bi bi-person-circle"></i>
+                    {/* <img
                       className="rounded-circle"
                       src={img1}
                       alt="Tim Brooks"
                       width="42"
-                    />
+                    /> */}
                     <div className="text-heading fs-md fw-medium ps-2 ms-1">
-                      Tim Brooks
+                      Guest
                     </div>
                   </footer>
                 </blockquote>
@@ -81,7 +85,7 @@ const Testimonials = () => {
                   </p>
                   <footer
                     className="d-flex align-items-center"
-                    style={personCirlcleStyle}
+                    style={testimonialSource}
                   >
                     <i class="bi bi-person-circle"></i>
                     {/* <img
