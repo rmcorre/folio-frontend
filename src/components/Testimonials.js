@@ -6,7 +6,7 @@ import img2 from '../img/testimonials/02.jpg';
 import illustration from '../img/testimonials/illustration.svg';
 
 // Temporary - add to scss
-const quoteSource = {
+const testimonialSource = {
   fontSize: '2rem',
   color: '#9e9fb4',
 };
@@ -58,7 +58,7 @@ const Testimonials = () => {
                   </p>
                   <footer
                     className="d-flex align-items-center"
-                    style={quoteSource}
+                    style={testimonialSource}
                   >
                     <i class="bi bi-person-circle"></i>
                     {/* <img
@@ -85,7 +85,7 @@ const Testimonials = () => {
                   </p>
                   <footer
                     className="d-flex align-items-center"
-                    style={quoteSource}
+                    style={testimonialSource}
                   >
                     <i class="bi bi-person-circle"></i>
                     {/* <img
