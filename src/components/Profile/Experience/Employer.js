@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Employer = (props) => {
   const jobRole = props.jobRole;
   const organization = props.organization;

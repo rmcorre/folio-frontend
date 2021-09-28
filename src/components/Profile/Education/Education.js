@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Education = (props) => {
   const course = props.course;
   const institution = props.institution;

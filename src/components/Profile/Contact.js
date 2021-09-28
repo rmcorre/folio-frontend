@@ -1,4 +1,3 @@
-import React from 'react';
 import { usePortfolioAPI } from '../../store/portfolioContext';
 
 const Contact = () => {
