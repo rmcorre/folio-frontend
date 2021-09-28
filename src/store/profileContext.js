@@ -11,10 +11,10 @@ const ProfileContext = createContext();
 export function ProfileContextProvider({ children }) {
   const [profile, setProfile] = useState(null);
 
-  const fetchData = useCallback(async () => {
-    // http://localhost:8080 (when server is on this device)
-    // http://192.168.1.73:8080 (when server is on HP Laptop)
-    // https://192.168.1.73:8443 (when server is on HP Laptop and using HTTPS)
+  const fetchDataWithJavaAPI = useCallback(async () => {
+    // http://localhost:8080/profiles (when server is on this device)
+    // http://192.168.1.73:8080/profiles (when server is on HP Laptop)
+    // https://192.168.1.73:8443/profiles (when server is on HP Laptop and using HTTPS)
 
     try {
       const response = await fetch('https://192.168.1.73:8443/profiles');
@@ -31,9 +31,28 @@ export function ProfileContextProvider({ children }) {
     }
   }, []);
 
+  const fetchDataWithFirebaseAPI = useCallback(async () => {
+    try {
+      const response = await fetch(
+        'https://folio-84465-default-rtdb.firebaseio.com/0.json'
+      );
+
+      if (!response.ok) {
+        throw new Error('Error fetching data!');
+      }
+
+      const data = await response.json();
+      console.log(data);
+
+      setProfile(data);
+    } catch (error) {
+      console.log(error);
+    }
+  }, []);
+
   useEffect(() => {
-    fetchData();
-  }, [fetchData]);
+    fetchDataWithJavaAPI();
+  }, [fetchDataWithJavaAPI]);
 
   if (profile === null) {
     return null;
