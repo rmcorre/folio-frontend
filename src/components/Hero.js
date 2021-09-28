@@ -23,7 +23,7 @@ const Hero = () => {
             Full Stack Developer
           </h2>
           <div className="wow fadeInUp text-nowrap" data-wow-delay=".7s">
-            <a className="btn btn-translucent-primary me-3" href="/resume">
+            <a className="btn btn-translucent-primary me-3" href="/cv">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="18"
