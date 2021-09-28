@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { tns } from '../../node_modules/tiny-slider/src/tiny-slider';
 
-import img1 from '../img/testimonials/01.jpg';
-import img2 from '../img/testimonials/02.jpg';
+// import img1 from '../img/testimonials/01.jpg';
+// import img2 from '../img/testimonials/02.jpg';
 import illustration from '../img/testimonials/illustration.svg';
 
 // Temporary - add to scss

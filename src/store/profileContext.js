@@ -42,7 +42,6 @@ export function ProfileContextProvider({ children }) {
       }
 
       const data = await response.json();
-      console.log(data);
 
       setProfile(data);
     } catch (error) {
