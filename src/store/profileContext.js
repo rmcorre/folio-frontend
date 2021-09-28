@@ -51,8 +51,8 @@ export function ProfileContextProvider({ children }) {
   }, []);
 
   useEffect(() => {
-    fetchDataWithJavaAPI();
-  }, [fetchDataWithJavaAPI]);
+    fetchDataWithFirebaseAPI();
+  }, [fetchDataWithFirebaseAPI]);
 
   if (profile === null) {
     return null;
