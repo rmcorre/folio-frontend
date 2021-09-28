@@ -60,7 +60,7 @@ const Testimonials = () => {
                     className="d-flex align-items-center"
                     style={testimonialSource}
                   >
-                    <i class="bi bi-person-circle"></i>
+                    <i className="bi bi-person-circle"></i>
                     {/* <img
                       className="rounded-circle"
                       src={img1}
@@ -87,7 +87,7 @@ const Testimonials = () => {
                     className="d-flex align-items-center"
                     style={testimonialSource}
                   >
-                    <i class="bi bi-person-circle"></i>
+                    <i className="bi bi-person-circle"></i>
                     {/* <img
                       className="rounded-circle"
                       src={img2}
