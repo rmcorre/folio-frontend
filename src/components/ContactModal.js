@@ -49,10 +49,10 @@ const ModalConfig = () => {
           </div>
         </div>
         <InputGroup>
-          <Input type="text" placeholder="Name" required="true" />
+          <Input type="text" placeholder="Name" required={true} />
         </InputGroup>
         <InputGroup>
-          <Input type="email" placeholder="Email" required="true" />
+          <Input type="email" placeholder="Email" required={true} />
         </InputGroup>
         <TextArea placeholder="ProjectDescription" />
         <div className="row py-2">
