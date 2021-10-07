@@ -5,7 +5,7 @@ import InputGroup from './UI/Form/InputGroup';
 import Input from './UI/Form/Input';
 import TextArea from './UI/Form/TextArea';
 
-const ModalConfig = () => {
+const Content = () => {
   return (
     <Modal id="modal-contact">
       <form className="modal-body needs-validation py-4" noValidate>
@@ -71,7 +71,7 @@ const ContactModal = () => {
   return (
     <>
       {ReactDOM.createPortal(
-        <ModalConfig />,
+        <Content />,
         document.getElementById('modal-root')
       )}
     </>
