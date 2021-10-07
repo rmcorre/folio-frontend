@@ -1,6 +1,7 @@
 import ReactDOM from 'react-dom';
 
 import Modal from '../components/UI/Modal/Modal';
+import ButtonGroup from './UI/Form/ButtonGroup';
 import InputRadioButton from './UI/Form/InputRadioButton';
 import InputGroup from './UI/Form/InputGroup';
 import Input from './UI/Form/Input';
@@ -10,7 +11,7 @@ const Content = () => {
   return (
     <Modal id="modal-contact">
       <form className="modal-body needs-validation py-4" noValidate>
-        <div className="btn-group mb-3">
+        <ButtonGroup>
           <InputRadioButton
             label={'Front End'}
             name={'services'}
@@ -29,7 +30,7 @@ const Content = () => {
             id={'feature'}
             htmlFor={'feature'}
           />
-        </div>
+        </ButtonGroup>
         <InputGroup>
           <Input type="text" placeholder="Name" required={true} />
         </InputGroup>
