@@ -6,6 +6,7 @@ import InputRadioButton from './UI/Form/InputRadioButton';
 import InputGroup from './UI/Form/InputGroup';
 import Input from './UI/Form/Input';
 import TextArea from './UI/Form/TextArea';
+import ButtonSubmit from './UI/Form/ButtomSubmit';
 
 const Content = () => {
   return (
@@ -40,9 +41,7 @@ const Content = () => {
         <TextArea placeholder="ProjectDescription" />
         <div className="row py-2">
           <div className="col-lg-6 col-md-8">
-            <button className="btn btn-primary d-block w-100" type="submit">
-              Send Request
-            </button>
+            <ButtonSubmit text={'Send Request'} />
           </div>
         </div>
       </form>
