@@ -1,6 +1,7 @@
 import ReactDOM from 'react-dom';
 
 import Modal from '../components/UI/Modal/Modal';
+import InputRadioButton from './UI/Form/InputRadioButton';
 import InputGroup from './UI/Form/InputGroup';
 import Input from './UI/Form/Input';
 import TextArea from './UI/Form/TextArea';
@@ -10,43 +11,24 @@ const Content = () => {
     <Modal id="modal-contact">
       <form className="modal-body needs-validation py-4" noValidate>
         <div className="btn-group mb-3">
-          <div className="me-2 mb-2">
-            <input
-              className="btn-check"
-              type="radio"
-              name="services"
-              id="frontEnd"
-              autoComplete="off"
-              readOnly
-            />
-            <label className="btn btn-outline-primary" htmlFor="frontEnd">
-              Front End
-            </label>
-          </div>
-          <div className="me-2 mb-2">
-            <input
-              className="btn-check"
-              type="radio"
-              name="services"
-              id="backEnd"
-              autoComplete="off"
-            />
-            <label className="btn btn-outline-primary" htmlFor="backEnd">
-              Back End
-            </label>
-          </div>
-          <div className="me-2 mb-2">
-            <input
-              className="btn-check"
-              type="radio"
-              name="services"
-              id="feature"
-              autoComplete="off"
-            />
-            <label className="btn btn-outline-primary" htmlFor="feature">
-              Feature
-            </label>
-          </div>
+          <InputRadioButton
+            label={'Front End'}
+            name={'services'}
+            id={'frontEnd'}
+            htmlFor={'frontEnd'}
+          />
+          <InputRadioButton
+            label={'Back End'}
+            name={'services'}
+            id={'backEnd'}
+            htmlFor={'backEnd'}
+          />
+          <InputRadioButton
+            label={'Feature'}
+            name={'services'}
+            id={'feature'}
+            htmlFor={'feature'}
+          />
         </div>
         <InputGroup>
           <Input type="text" placeholder="Name" required={true} />
