@@ -9,7 +9,7 @@ const Navbar = (props) => {
       <div className="container px-0 px-xl-3">
         <NavbarToggler target="#primaryMenu" toggle="offcanvas" />
         <NavbarBranding />
-        <NavbarActions admin={props.admin} />
+        <NavbarActions admin={props.admin} setModalShow={props.setModalShow} />
         <NavbarNav />
       </div>
     </nav>

@@ -29,7 +29,7 @@ const PageHeader = (props) => {
 
   return (
     <header ref={header} className={`header navbar-sticky ${navbarStuck}`}>
-      <Navbar admin={props.admin} />
+      <Navbar admin={props.admin} setModalShow={props.setModalShow} />
     </header>
   );
 };
