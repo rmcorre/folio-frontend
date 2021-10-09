@@ -13,20 +13,23 @@ const NavbarActions = (props) => {
   return (
     <div className="d-flex align-items-center order-lg-3 ms-lg-auto">
       {authNav}
-      <a
+      <button
         className="btn btn-primary d-lg-inline-block d-none"
-        href="#modal-contact"
-        data-bs-toggle="modal"
+        // href="#modal-contact"
+        // data-bs-toggle="modal"
+        onClick={() => {
+          props.setModalShow(true);
+        }}
       >
         Hire me
-      </a>
-      <a
+      </button>
+      {/* <a
         className="btn btn-sm btn-primary d-lg-none d-inline-block"
         href="#modal-contact"
         data-bs-toggle="modal"
       >
         Hire me
-      </a>
+      </a> */}
     </div>
   );
 };

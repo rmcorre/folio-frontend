@@ -4,7 +4,8 @@ const Input = (props) => {
       className="form-control rounded"
       type={props.type}
       placeholder={props.placeholder}
-      required={props.required}
+      onChange={props.onChange}
+      value={props.value}
     />
   );
 };

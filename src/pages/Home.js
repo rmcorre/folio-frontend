@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import RemoveFromDom from '../components/RemoveFromDom';
 import PageLoadingSpinner from '../components/PageLoadingSpinner';
 
@@ -12,12 +14,14 @@ import ContactModal from '../components/ContactModal';
 import BackToTop from '../components/BackToTop';
 
 function App() {
+  const [modalShow, setModalShow] = useState(false);
+
   return (
     <>
       <RemoveFromDom delay="300">
         <PageLoadingSpinner />
       </RemoveFromDom>
-      <PageHeader />
+      <PageHeader setModalShow={setModalShow} />
       <main className="page-wrapper">
         <Hero />
         <Services />
@@ -26,7 +30,7 @@ function App() {
         <Socials />
       </main>
       <Footer />
-      <ContactModal />
+      <ContactModal modalShow={modalShow} setModalShow={setModalShow} />
       <BackToTop />
     </>
   );
