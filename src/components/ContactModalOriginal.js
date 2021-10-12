@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import ReactDOM from 'react-dom';
 
-import Modal from '../components/UI/Modal/Modal';
+import Modal from './UI/Modal/Modal';
 import ButtonGroup from './UI/Form/ButtonGroup';
 import InputRadioButton from './UI/Form/InputRadioButton';
 import InputGroup from './UI/Form/InputGroup';
