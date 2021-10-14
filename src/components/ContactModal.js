@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import Modal from 'react-bootstrap/Modal';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
@@ -22,83 +22,73 @@ const toggles = [
   },
 ];
 
-// const inputs = [
-//   {
-//     className: 'mb-3 text-muted',
-//     controlId: 'floatingInput',
-//     label: 'Name',
-//     type: 'text',
-//     placeholder: 'Name',
-//     onchange: nameHandler,
-//     style: null,
-//   },
-//   {
-//     className: 'mb-3 text-muted',
-//     controlId: 'floatingInput',
-//     label: 'Email',
-//     type: 'text',
-//     placeholder: 'Email',
-//     style: null,
-//   },
-//   {
-//     className: 'mb-3 text-muted',
-//     controlId: 'floatingTextArea',
-//     label: 'Project Description',
-//     as: 'textarea',
-//     placeholder: 'Project Description',
-//     style: { height: '120px' },
-//   },
-// ];
-
 // TODO: ADD CUSTOM HOOK FOR MODAL STATE
 // TODO: ADD FORM VALIDATION
 const ContactModal = (props) => {
   const [radioValue, setRadioValue] = useState('1');
+
   const [nameValue, setNameValue] = useState('');
+  const [nameIsTouched, setNameIsTouched] = useState(false);
+
+  const nameIsValid = nameValue.trim() !== '';
+
   const [emailValue, setEmailValue] = useState('');
   const [descriptionValue, setDescriptionValue] = useState('');
 
-  const nameHandler = (e) => {
+  const [formIsValid, setFormIsValid] = useState(false);
+
+  useEffect(() => {
+    if (nameIsValid) {
+      setFormIsValid(true);
+    } else {
+      setFormIsValid(false);
+    }
+  }, [nameIsValid]);
+
+  const nameOnChangeHandler = (e) => {
     setNameValue(e.target.value);
   };
 
-  const emailHandler = (e) => {
+  const emailOnChangeHandler = (e) => {
     setEmailValue(e.target.value);
   };
 
-  const descriptionHandler = (e) => {
+  const descriptionOnChangeHandler = (e) => {
     setDescriptionValue(e.target.value);
+  };
+
+  const nameOnBlurHandler = (e) => {
+    setNameIsTouched(true);
   };
 
   const inputs = [
     {
-      className: 'mb-3 text-muted',
       controlId: 'floatingInput',
       label: 'Name',
       type: 'text',
       placeholder: 'Name',
       value: nameValue,
-      onChange: nameHandler,
+      onChange: nameOnChangeHandler,
+      onBlur: nameOnBlurHandler,
       style: null,
+      isValid: !nameIsValid && nameIsTouched,
     },
     {
-      className: 'mb-3 text-muted',
       controlId: 'floatingInput',
       label: 'Email',
       type: 'text',
       placeholder: 'Email',
       value: emailValue,
-      onChange: emailHandler,
+      onChange: emailOnChangeHandler,
       style: null,
     },
     {
-      className: 'mb-3 text-muted',
       controlId: 'floatingTextArea',
       label: 'Project Description',
       as: 'textarea',
       placeholder: 'Project Description',
       value: descriptionValue,
-      onChange: descriptionHandler,
+      onChange: descriptionOnChangeHandler,
       style: { height: '120px' },
     },
   ];
@@ -106,19 +96,16 @@ const ContactModal = (props) => {
   const formSubmissionHandler = (e) => {
     e.preventDefault();
 
-    if (nameValue.trim() === '') {
+    setNameIsTouched(true);
+
+    if (!formIsValid) {
       return;
     }
 
-    if (emailValue.trim() === '') {
-      return;
-    }
-
-    if (descriptionValue.trim() === '') {
-      return;
-    }
-
+    setFormIsValid(false);
     setNameValue('');
+    setNameIsTouched(false);
+
     setEmailValue('');
     setDescriptionValue('');
   };
@@ -142,7 +129,7 @@ const ContactModal = (props) => {
   const inputsList = inputs.map((input, idx) => (
     <Form.Group key={idx}>
       <FloatingLabel
-        className={input.className}
+        className="mb-3 text-muted"
         controlId={input.controlId}
         label={input.label}
       >
@@ -151,8 +138,10 @@ const ContactModal = (props) => {
           type={input.type}
           placeholder={input.placeholder}
           onChange={input.onChange}
+          onBlur={input.onBlur}
           style={input.style}
         />
+        {input.isValid && <p>{`${input.label} must not be empty.`}</p>}
       </FloatingLabel>
     </Form.Group>
   ));
@@ -163,12 +152,15 @@ const ContactModal = (props) => {
         show={props.modalShow}
         onHide={() => {
           props.setModalShow(false);
+          setFormIsValid(false);
+          setNameValue('');
+          setNameIsTouched(false);
         }}
         centered
       >
         <Modal.Header
           className="mb-1"
-          onClick={() => {
+          onHide={() => {
             props.setModalShow(false);
           }}
           closeButton
@@ -188,6 +180,7 @@ const ContactModal = (props) => {
                   onClick={() => {
                     props.setModalShow(false);
                   }}
+                  disabled={!formIsValid}
                 >
                   Send Request
                 </Button>
