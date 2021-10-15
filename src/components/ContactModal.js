@@ -51,27 +51,32 @@ const ContactModal = (props) => {
 
   const inputs = [
     {
-      controlId: 'floatingInput',
-      label: 'Name',
-      type: 'text',
-      placeholder: 'Name',
       value: nameValue,
+      config: {
+        label: 'Name',
+        type: 'text',
+        placeholder: 'Name',
+      },
       onChange: nameOnChangeHandler,
       onBlur: nameOnBlurHandler,
       error: !nameIsValid && nameIsTouched,
     },
     {
-      controlId: 'floatingInput',
-      label: 'Email',
-      type: 'text',
-      placeholder: 'Email',
+      value: '',
+      config: {
+        label: 'Email',
+        type: 'text',
+        placeholder: 'Email',
+      },
       style: null,
     },
     {
-      controlId: 'floatingTextArea',
-      label: 'Project Description',
-      as: 'textarea',
-      placeholder: 'Project Description',
+      value: '',
+      config: {
+        label: 'Project Description',
+        as: 'textarea',
+        placeholder: 'Project Description',
+      },
       style: { height: '120px' },
     },
   ];
@@ -96,20 +101,20 @@ const ContactModal = (props) => {
     <Form.Group key={idx}>
       <FloatingLabel
         className="mb-3 text-muted"
-        controlId={input.controlId}
-        label={input.label}
+        controlId={input.config.label}
+        label={input.config.label}
       >
         <Form.Control
-          as={input.as}
-          type={input.type}
-          placeholder={input.placeholder}
+          as={input.config.as}
+          type={input.config.type}
+          placeholder={input.config.placeholder}
           onChange={input.onChange}
           onBlur={input.onBlur}
           style={input.style}
         />
         {input.error && (
           <p className="text-danger fs-ms ps-2">
-            {`Please enter a valid ${input.label.toLowerCase()}.`}
+            {`Please enter a valid ${input.config.label.toLowerCase()}.`}
           </p>
         )}
       </FloatingLabel>
@@ -135,7 +140,7 @@ const ContactModal = (props) => {
           <Modal.Title>What project are you looking for?</Modal.Title>
         </Modal.Header>
         <Modal.Body className="py-4">
-          <Form onSubmit={formSubmissionHandler}>
+          <Form onSubmit={formSubmissionHandler} noValidate>
             <ButtonGroup className="mb-3">{togglesList}</ButtonGroup>
             {inputsList}
             <div className="row py-2">
