@@ -1,11 +1,11 @@
 @charset "UTF-8";
-@import url(c:\Users\rmcor\Desktop\folio-frontend\node_modules\@fontsource\inter\variable.css);
-@import url(c:\Users\rmcor\Desktop\folio-frontend\node_modules\bootstrap-icons\font\bootstrap-icons.css);
-@import url(c:\Users\rmcor\Desktop\folio-frontend\node_modules\animate.css\animate.compat.css);
-@import url(c:\Users\rmcor\Desktop\folio-frontend\src\assets\scss\vendor\bitIcon\style.css);
-@import url(c:\Users\rmcor\Desktop\folio-frontend\node_modules\simplebar\dist\simplebar.css);
-@import url(c:\Users\rmcor\Desktop\folio-frontend\node_modules\tiny-slider\dist\tiny-slider.css);
-@import url(c:\Users\rmcor\Desktop\folio-frontend\node_modules\@fontsource\raleway\variable.css);
+@import url(c:\Users\Horacio\Desktop\folio-frontend\node_modules\@fontsource\inter\variable.css);
+@import url(c:\Users\Horacio\Desktop\folio-frontend\node_modules\bootstrap-icons\font\bootstrap-icons.css);
+@import url(c:\Users\Horacio\Desktop\folio-frontend\node_modules\animate.css\animate.compat.css);
+@import url(c:\Users\Horacio\Desktop\folio-frontend\src\assets\scss\vendor\bitIcon\style.css);
+@import url(c:\Users\Horacio\Desktop\folio-frontend\node_modules\simplebar\dist\simplebar.css);
+@import url(c:\Users\Horacio\Desktop\folio-frontend\node_modules\tiny-slider\dist\tiny-slider.css);
+@import url(c:\Users\Horacio\Desktop\folio-frontend\node_modules\@fontsource\raleway\variable.css);
 @font-face {
   font-family: "folio";
   src: url("../fonts/folio.ttf") format("truetype");
