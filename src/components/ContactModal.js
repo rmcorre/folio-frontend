@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 import Modal from 'react-bootstrap/Modal';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
@@ -26,39 +26,29 @@ const toggles = [
 // TODO: ADD FORM VALIDATION
 const ContactModal = (props) => {
   const [radioValue, setRadioValue] = useState('1');
-
   const [nameValue, setNameValue] = useState('');
   const [nameIsTouched, setNameIsTouched] = useState(false);
 
   const nameIsValid = nameValue.trim() !== '';
+  const nameInputIsInvalid = !nameIsValid && nameIsTouched;
 
-  const [emailValue, setEmailValue] = useState('');
-  const [descriptionValue, setDescriptionValue] = useState('');
-
-  const [formIsValid, setFormIsValid] = useState(false);
-
-  useEffect(() => {
-    if (nameIsValid) {
-      setFormIsValid(true);
-    } else {
-      setFormIsValid(false);
-    }
-  }, [nameIsValid]);
+  let formIsValid = false;
 
   const nameOnChangeHandler = (e) => {
     setNameValue(e.target.value);
   };
 
-  const emailOnChangeHandler = (e) => {
-    setEmailValue(e.target.value);
-  };
-
-  const descriptionOnChangeHandler = (e) => {
-    setDescriptionValue(e.target.value);
-  };
-
   const nameOnBlurHandler = (e) => {
     setNameIsTouched(true);
+  };
+
+  const formSubmissionHandler = (e) => {
+    e.preventDefault();
+
+    if (!formIsValid) return;
+
+    setNameValue('');
+    setNameIsTouched(false);
   };
 
   const inputs = [
@@ -78,8 +68,6 @@ const ContactModal = (props) => {
       label: 'Email',
       type: 'text',
       placeholder: 'Email',
-      value: emailValue,
-      onChange: emailOnChangeHandler,
       style: null,
     },
     {
@@ -87,28 +75,9 @@ const ContactModal = (props) => {
       label: 'Project Description',
       as: 'textarea',
       placeholder: 'Project Description',
-      value: descriptionValue,
-      onChange: descriptionOnChangeHandler,
       style: { height: '120px' },
     },
   ];
-
-  const formSubmissionHandler = (e) => {
-    e.preventDefault();
-
-    setNameIsTouched(true);
-
-    if (!formIsValid) {
-      return;
-    }
-
-    setFormIsValid(false);
-    setNameValue('');
-    setNameIsTouched(false);
-
-    setEmailValue('');
-    setDescriptionValue('');
-  };
 
   const togglesList = toggles.map((toggle, idx) => (
     <div key={idx} className="me-2 mb-2">
@@ -146,25 +115,22 @@ const ContactModal = (props) => {
     </Form.Group>
   ));
 
+  if (nameIsValid) {
+    formIsValid = true;
+  }
+
   return (
     <>
       <Modal
         show={props.modalShow}
         onHide={() => {
           props.setModalShow(false);
-          setFormIsValid(false);
           setNameValue('');
           setNameIsTouched(false);
         }}
         centered
       >
-        <Modal.Header
-          className="mb-1"
-          onHide={() => {
-            props.setModalShow(false);
-          }}
-          closeButton
-        >
+        <Modal.Header className="mb-1" closeButton>
           <Modal.Title>What project are you looking for?</Modal.Title>
         </Modal.Header>
         <Modal.Body className="py-4">
