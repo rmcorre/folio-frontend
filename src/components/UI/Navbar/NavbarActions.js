@@ -15,21 +15,20 @@ const NavbarActions = (props) => {
       {authNav}
       <button
         className="btn btn-primary d-lg-inline-block d-none"
-        // href="#modal-contact"
-        // data-bs-toggle="modal"
         onClick={() => {
           props.setModalShow(true);
         }}
       >
         Hire me
       </button>
-      {/* <a
+      <button
         className="btn btn-sm btn-primary d-lg-none d-inline-block"
-        href="#modal-contact"
-        data-bs-toggle="modal"
+        onClick={() => {
+          props.setModalShow(true);
+        }}
       >
         Hire me
-      </a> */}
+      </button>
     </div>
   );
 };
