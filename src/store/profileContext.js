@@ -17,7 +17,7 @@ export function ProfileContextProvider({ children }) {
     // https://192.168.1.73:8443/profiles (when server is on HP Laptop and using HTTPS)
 
     try {
-      const response = await fetch('https://192.168.1.73:8443/profiles');
+      const response = await fetch('http://localhost:8080/profiles');
 
       if (!response.ok) {
         throw new Error('Error fetching data!');
