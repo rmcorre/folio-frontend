@@ -30,8 +30,6 @@ const ContactModal = (props) => {
   const [nameIsTouched, setNameIsTouched] = useState(false);
 
   const nameIsValid = nameValue.trim() !== '';
-  const nameInputIsInvalid = !nameIsValid && nameIsTouched;
-
   let formIsValid = false;
 
   const nameOnChangeHandler = (e) => {
@@ -60,8 +58,7 @@ const ContactModal = (props) => {
       value: nameValue,
       onChange: nameOnChangeHandler,
       onBlur: nameOnBlurHandler,
-      style: null,
-      isValid: !nameIsValid && nameIsTouched,
+      error: !nameIsValid && nameIsTouched,
     },
     {
       controlId: 'floatingInput',
@@ -110,7 +107,11 @@ const ContactModal = (props) => {
           onBlur={input.onBlur}
           style={input.style}
         />
-        {input.isValid && <p>{`${input.label} must not be empty.`}</p>}
+        {input.error && (
+          <p className="text-danger fs-ms ps-2">
+            {`Please enter a valid ${input.label.toLowerCase()}.`}
+          </p>
+        )}
       </FloatingLabel>
     </Form.Group>
   ));
