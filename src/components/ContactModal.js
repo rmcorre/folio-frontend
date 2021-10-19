@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
 
 import Modal from 'react-bootstrap/Modal';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
@@ -33,65 +35,54 @@ const toggles = [
 
 const inputs = [
   {
-    id: 1,
-    label: 'Name',
+    id: 'name',
+    name: 'name',
     type: 'text',
+    label: 'Name',
     placeholder: 'Name',
     value: '',
     style: {},
   },
   {
-    id: 2,
+    id: 'email',
+    name: 'email',
+    type: 'email',
     label: 'Email',
-    type: 'text',
     placeholder: 'Email',
     value: '',
     style: {},
   },
   {
-    id: 3,
-    label: 'Project Description',
+    id: 'message',
+    name: 'message',
     as: 'textarea',
+    label: 'Project Description',
     placeholder: 'Project Description',
     value: '',
     style: { height: '120px' },
   },
 ];
 
-// TODO: ADD CUSTOM HOOK FOR MODAL STATE
-// TODO: ADD FORM VALIDATION
 const ContactModal = (props) => {
   const [radioValue, setRadioValue] = useState('1');
-  const [nameValue, setNameValue] = useState('');
-  const [nameIsTouched, setNameIsTouched] = useState(false);
-  const [validated, setValidated] = useState(false);
 
-  const nameIsValid = nameValue.trim() !== '';
-  const nameInputIsInvalid = !nameIsValid && nameIsTouched;
-  // let formIsValid = false;
-
-  const nameOnChangeHandler = (e) => {
-    setNameValue(e.target.value);
-  };
-
-  const nameOnBlurHandler = (e) => {
-    setNameIsTouched(true);
-  };
-
-  const formSubmissionHandler = (e) => {
-    const form = e.currentTarget;
-    console.log(form);
-    if (form.checkValidity() === false) {
-      e.preventDefault();
-      e.stopPropagation();
-    }
-
-    // if (!formIsValid) return;
-    setValidated(true);
-
-    setNameValue('');
-    setNameIsTouched(false);
-  };
+  const formik = useFormik({
+    initialValues: {
+      name: '',
+      email: '',
+      message: '',
+    },
+    validationSchema: Yup.object({
+      name: Yup.string().required('Required'),
+      email: Yup.string().email('Invalid email address').required('Required'),
+      message: Yup.string().required('Required'),
+    }),
+    onSubmit: (values) => {
+      console.log(JSON.stringify(values, null, 2));
+      props.setModalShow(false);
+      formik.handleReset();
+    },
+  });
 
   const togglesList = toggles.map((toggle) => (
     <div key={toggle.id} className="me-2 mb-2">
@@ -101,8 +92,8 @@ const ContactModal = (props) => {
         type={toggle.type}
         name={toggle.name}
         value={toggle.value}
-        onChange={(e) => setRadioValue(e.currentTarget.value)}
         checked={radioValue === toggle.value}
+        onChange={(e) => setRadioValue(e.currentTarget.value)}
       >
         {toggle.text}
       </ToggleButton>
@@ -113,73 +104,54 @@ const ContactModal = (props) => {
     <Form.Group key={input.id}>
       <FloatingLabel
         className="mb-3 text-muted"
-        controlId={input.label}
+        controlId={input.id}
         label={input.label}
       >
         <Form.Control
           as={input.as}
+          name={input.name}
           type={input.type}
           placeholder={input.placeholder}
-          onChange={nameOnChangeHandler}
-          onBlur={nameOnBlurHandler}
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          value={formik.values[input.id]}
           style={input.style}
-          isvalid={nameInputIsInvalid.toString()}
-          required
         />
-        <Form.Control.Feedback type="invalid">
-          Please provide a valid {input.label}.
-        </Form.Control.Feedback>
-        {/* {nameInputIsInvalid && (
-          <p className="text-danger fs-ms ps-2">
-            {`Please enter a valid ${input.label.toLowerCase()}.`}
-          </p>
-        )} */}
+        {formik.touched[input.id] && formik.errors[input.id] ? (
+          <div className="text-danger text-end fs-xs pe-3">
+            {formik.errors[input.id]}
+          </div>
+        ) : null}
       </FloatingLabel>
     </Form.Group>
   ));
 
-  // if (nameIsValid) {
-  //   setValidated(true);
-  // }
-
   return (
-    <>
-      <Modal
-        show={props.modalShow}
-        onHide={() => {
-          props.setModalShow(false);
-          setNameValue('');
-          setNameIsTouched(false);
-          setValidated(false);
-        }}
-        centered
-      >
-        <Modal.Header className="mb-1" closeButton>
-          <Modal.Title>What project are you looking for?</Modal.Title>
-        </Modal.Header>
-        <Modal.Body className="py-4">
-          <Form
-            validated={validated}
-            onSubmit={formSubmissionHandler}
-            noValidate
-          >
-            <ButtonGroup className="mb-3">{togglesList}</ButtonGroup>
-            {inputsList}
-            <div className="row py-2">
-              <div className="col-lg-6 col-md-8">
-                <Button
-                  className="d-block w-100"
-                  variant="primary"
-                  type="submit"
-                >
-                  Send Request
-                </Button>
-              </div>
+    <Modal
+      show={props.modalShow}
+      onHide={() => {
+        props.setModalShow(false);
+        formik.handleReset();
+      }}
+      centered
+    >
+      <Modal.Header className="mb-1" closeButton>
+        <Modal.Title>What project are you looking for?</Modal.Title>
+      </Modal.Header>
+      <Modal.Body className="py-4">
+        <Form onSubmit={formik.handleSubmit} noValidate>
+          <ButtonGroup className="mb-3">{togglesList}</ButtonGroup>
+          {inputsList}
+          <div className="row py-2">
+            <div className="col-lg-6 col-md-8">
+              <Button className="d-block w-100" variant="primary" type="submit">
+                Send Request
+              </Button>
             </div>
-          </Form>
-        </Modal.Body>
-      </Modal>
-    </>
+          </div>
+        </Form>
+      </Modal.Body>
+    </Modal>
   );
 };
 
