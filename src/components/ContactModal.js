@@ -11,60 +11,42 @@ import Button from 'react-bootstrap/Button';
 
 const toggles = [
   {
-    id: 1,
-    text: 'Front End',
-    type: 'radio',
-    name: 'services',
+    label: 'Front End',
     value: '1',
   },
   {
-    id: 2,
-    text: 'Back End',
-    type: 'radio',
-    name: 'services',
+    label: 'Back End',
     value: '2',
   },
   {
-    id: 3,
-    text: 'Feature',
-    type: 'radio',
-    name: 'services',
+    label: 'Feature',
     value: '3',
   },
 ];
 
 const inputs = [
   {
-    id: 'name',
-    name: 'name',
     type: 'text',
     label: 'Name',
-    placeholder: 'Name',
     value: '',
     style: {},
   },
   {
-    id: 'email',
-    name: 'email',
     type: 'email',
     label: 'Email',
-    placeholder: 'Email',
     value: '',
     style: {},
   },
   {
-    id: 'message',
-    name: 'message',
     as: 'textarea',
-    label: 'Project Description',
-    placeholder: 'Project Description',
+    label: 'Message',
     value: '',
     style: { height: '120px' },
   },
 ];
 
 const ContactModal = (props) => {
-  const [radioValue, setRadioValue] = useState('1');
+  const [targetValue, setTargetValue] = useState('1');
 
   const formik = useFormik({
     initialValues: {
@@ -84,42 +66,48 @@ const ContactModal = (props) => {
     },
   });
 
+  const handleHide = () => {
+    props.setModalShow(false);
+    formik.handleReset();
+  };
+
   const togglesList = toggles.map((toggle) => (
-    <div key={toggle.id} className="me-2 mb-2">
+    <div key={toggle.value} className="me-2 mb-2">
       <ToggleButton
         variant="outline-primary"
-        id={`toggle-${toggle.id}`}
-        type={toggle.type}
-        name={toggle.name}
+        id={`toggle-${toggle.value}`}
+        type="radio"
+        name="services"
         value={toggle.value}
-        checked={radioValue === toggle.value}
-        onChange={(e) => setRadioValue(e.currentTarget.value)}
+        checked={targetValue === toggle.value}
+        onChange={(e) => setTargetValue(e.currentTarget.value)}
       >
-        {toggle.text}
+        {toggle.label}
       </ToggleButton>
     </div>
   ));
 
   const inputsList = inputs.map((input) => (
-    <Form.Group key={input.id}>
+    <Form.Group key={input.label}>
       <FloatingLabel
         className="mb-3 text-muted"
-        controlId={input.id}
+        controlId={input.label}
         label={input.label}
       >
         <Form.Control
           as={input.as}
-          name={input.name}
+          name={input.label.toLowerCase()}
           type={input.type}
-          placeholder={input.placeholder}
+          placeholder={input.label}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
-          value={formik.values[input.id]}
+          value={formik.values[input.label.toLowerCase()]}
           style={input.style}
         />
-        {formik.touched[input.id] && formik.errors[input.id] ? (
+        {formik.touched[input.label.toLowerCase()] &&
+        formik.errors[input.label.toLowerCase()] ? (
           <div className="text-danger text-end fs-xs pe-3">
-            {formik.errors[input.id]}
+            {formik.errors[input.label.toLowerCase()]}
           </div>
         ) : null}
       </FloatingLabel>
@@ -127,14 +115,7 @@ const ContactModal = (props) => {
   ));
 
   return (
-    <Modal
-      show={props.modalShow}
-      onHide={() => {
-        props.setModalShow(false);
-        formik.handleReset();
-      }}
-      centered
-    >
+    <Modal show={props.modalShow} onHide={handleHide} centered>
       <Modal.Header className="mb-1" closeButton>
         <Modal.Title>What project are you looking for?</Modal.Title>
       </Modal.Header>
